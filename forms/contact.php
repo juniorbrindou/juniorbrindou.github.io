@@ -13,7 +13,8 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Formatage des données à enregistrer dans le fichier
-$data = "Nom : $name\nE-mail : $email\nObjet : $subject\nMessage : $message\n\n==========================================================================================================\n\n\n";
+$date = date('d-m-Y H:i');
+$data = "Date: $date\nNom : $name\nE-mail : $email\nObjet : $subject\nMessage : $message\n\n==========================================================================================================\n\n\n";
 
 // Écriture des données dans le fichier
 file_put_contents('data.txt', $data, FILE_APPEND);
