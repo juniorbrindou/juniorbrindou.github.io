@@ -299,4 +299,20 @@
     }
   });
 
+  /**
+   * Calculate years of experience
+   */
+  function updateExperienceYears() {
+    const startYear = 2021;
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - startYear;
+    const experienceElement = document.getElementById('experienceYears');
+    if (experienceElement) {
+      experienceElement.textContent = years;
+    }
+  }
+
+  // Update experience years when page loads
+  window.addEventListener('load', updateExperienceYears);
+
 })()
