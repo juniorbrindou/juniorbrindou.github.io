@@ -259,4 +259,44 @@
    */
   new PureCounter();
 
+  /**
+   * Gestion du formulaire de contact
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    const messageTypeSelect = document.getElementById('messageType');
+    const subjectInput = document.getElementById('subject');
+    const messageTextarea = document.getElementById('message');
+
+    const templates = {
+      contact: {
+        subject: "Prise de contact",
+        message: "Bonjour,\n\nJe souhaite prendre contact avec vous pour discuter d'une éventuelle collaboration.\n\nCordialement,"
+      },
+      prestation: {
+        subject: "Demande de prestation de service",
+        message: "Bonjour,\n\nJe souhaite faire appel à vos services pour le développement d'un projet.\n\nType de projet :\nBudget estimé :\nDélai souhaité :\n\nDescription du projet :\n\nCordialement,"
+      },
+      devis: {
+        subject: "Demande de devis",
+        message: "Bonjour,\n\nJe souhaiterais obtenir un devis pour le projet suivant :\n\nType de projet :\nFonctionnalités souhaitées :\nDélai souhaité :\n\nMerci d'avance,\nCordialement,"
+      }
+    };
+
+    if (messageTypeSelect) {
+      messageTypeSelect.addEventListener('change', function(e) {
+        const selected = e.target.value;
+        const template = templates[selected];
+        
+        if (template) {
+          subjectInput.value = template.subject;
+          messageTextarea.value = template.message;
+        } else {
+          // Si "Autre" est sélectionné ou pas de template
+          subjectInput.value = '';
+          messageTextarea.value = '';
+        }
+      });
+    }
+  });
+
 })()

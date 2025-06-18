@@ -647,16 +647,11 @@
 								<h4>Tel:</h4>
 								<p>+225 0779843757</p>
 							</div>
-
-							<!-- <iframe
-								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-								frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
 						</div>
-
 					</div>
 
 					<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-						<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+						<form action="https://formsubmit.co/225juniorbrindou@gmail.com" method="POST" class="php-email-form">
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label for="name">Votre Nom <code>*</code></label>
@@ -668,17 +663,33 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="name">Objet <code>*</code></label>
+								<label for="messageType">Type de Message <code>*</code></label>
+								<select class="form-control" name="messageType" id="messageType" required>
+									<option value="">Sélectionnez un type de message</option>
+									<option value="contact">Prise de contact</option>
+									<option value="prestation">Demande de prestation</option>
+									<option value="devis">Demande de devis</option>
+									<option value="autre">Autre</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="subject">Objet <code>*</code></label>
 								<input type="text" class="form-control" name="subject" id="subject" required>
 							</div>
 							<div class="form-group">
-								<label for="name">Message <code>*</code></label>
-								<textarea class="form-control" name="message" rows="10" required></textarea>
+								<label for="message">Message <code>*</code></label>
+								<textarea class="form-control" name="message" id="message" rows="10" required></textarea>
 							</div>
+							<!-- Anti-spam hidden input -->
+							<input type="text" name="_honey" style="display: none">
+							<!-- Disable captcha -->
+							<input type="hidden" name="_captcha" value="false">
+							<!-- Redirect after submission -->
+							<input type="hidden" name="_next" value="https://juniorbrindou.github.io/?message=success">
 							<div class="my-3">
 								<div class="loading">Envoie...</div>
-								<div class="sent-message">Votre message à été envoyé. Je vous contacterai sous peu.
-									Merci!</div>
+								<div class="error-message"></div>
+								<div class="sent-message">Votre message à été envoyé. Je vous contacterai sous peu. Merci!</div>
 							</div>
 							<div class="text-center"><button type="submit">Envoyer</button></div>
 						</form>
