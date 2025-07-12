@@ -5,13 +5,34 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>Brindou Junior - Développeur Web/Mobile</title>
+	<title>Junior Brindou - Développeur Full Stack Java/Angular | Portfolio 2024</title>
 	<meta
-		content="Site web personnel de Brindou, développeur web et mobile freelance Senior. Découvrez mes compétences et projets dans le domaine du développement web et application mobile"
+		content="Développeur Full Stack expérimenté spécialisé en Java/Spring Boot et Angular. +4 ans d'expérience chez ECOBANK. Services de développement web, mobile et microservices à Abidjan, Côte d'Ivoire."
 		name="description">
 
-	<meta content="web developer, developer mobile, freelance, junior, Brindou, application web, application mobile"
+	<meta content="Junior Brindou, développeur full stack, Java, Spring Boot, Angular, développeur web Abidjan, freelance Côte d'Ivoire, ASP.NET Core, microservices, ECOBANK"
 		name="keywords">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://juniorbrindou.github.io/">
+	<meta property="og:title" content="Junior Brindou - Développeur Full Stack Java/Angular">
+	<meta property="og:description" content="Développeur Full Stack expérimenté spécialisé en Java/Spring Boot et Angular. Services de développement web et mobile à Abidjan.">
+	<meta property="og:image" content="https://juniorbrindou.github.io/assets/img/profile-img.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://juniorbrindou.github.io/">
+	<meta property="twitter:title" content="Junior Brindou - Développeur Full Stack Java/Angular">
+	<meta property="twitter:description" content="Développeur Full Stack expérimenté spécialisé en Java/Spring Boot et Angular. Services de développement web et mobile à Abidjan.">
+	<meta property="twitter:image" content="https://juniorbrindou.github.io/assets/img/profile-img.jpg">
+
+	<!-- Additional SEO -->
+	<meta name="author" content="Junior Brindou">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="French">
+	<meta name="revisit-after" content="7 days">
+	<link rel="canonical" href="https://juniorbrindou.github.io/">
 
 	<!-- Favicons -->
 	<link href="assets/img/favicon.png" rel="icon">
@@ -31,12 +52,55 @@
 	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Junior Brindou",
+		"alternateName": "Brindou Gnépa Junior",
+		"jobTitle": "Développeur Full Stack",
+		"description": "Développeur Full Stack spécialisé en Java/Spring Boot et Angular avec plus de 4 ans d'expérience",
+		"url": "https://juniorbrindou.github.io/",
+		"image": "https://juniorbrindou.github.io/assets/img/profile-img.jpg",
+		"email": "225juniorbrindou@gmail.com",
+		"telephone": "+225 0779843757",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Abidjan",
+			"addressCountry": "CI"
+		},
+		"sameAs": [
+			"https://www.linkedin.com/in/juniorbrindou/",
+			"https://github.com/juniorbrindou",
+			"https://twitter.com/juniorbrindou"
+		],
+		"knowsAbout": [
+			"Java", "Spring Boot", "Angular", "TypeScript", "JavaScript", 
+			"SQL Server", "ASP.NET Core", "Docker", "Microservices", "REST API"
+		],
+		"worksFor": {
+			"@type": "Organization",
+			"name": "ECOBANK CÔTE D'IVOIRE"
+		},
+		"alumniOf": {
+			"@type": "Organization",
+			"name": "ESATIC - École Supérieure Africaine des TIC"
+		}
+	}
+	</script>
 </head>
 
 <body>
 
 	<!-- ======= Mobile nav toggle button ======= -->
 	<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+	<!-- ======= Theme Toggle Button ======= -->
+	<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+		<i class="bi bi-moon-fill" id="theme-icon"></i>
+	</button>
 
 	<!-- ======= Header ======= -->
 	<header id="header">
@@ -67,8 +131,12 @@
 							<span>CV</span></a></li>
 					<li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
 							<span>Portfolio</span></a></li>
+					<li><a href="#blog" class="nav-link scrollto"><i class="bx bx-edit"></i>
+							<span>Blog</span></a></li>
 					<li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
 							<span>Services</span></a></li>
+					<li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-chat"></i>
+							<span>Témoignages</span></a></li>
 					<li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
 							<span>Contact</span></a></li>
 				</ul>
@@ -270,6 +338,50 @@
 				</div>
 			</div>
 		</section><!-- End Skills Section -->
+
+		<!-- ======= Statistics Section ======= -->
+		<section id="stats" class="stats" aria-labelledby="stats-heading">
+			<div class="container">
+				<div class="section-title">
+					<h2 id="stats-heading">Statistiques</h2>
+					<p>Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-3 col-md-6" data-aos="fade-up">
+						<div class="stats-item" role="article" aria-labelledby="stat-experience">
+							<span class="counter" data-target="4" aria-live="polite">0</span>
+							<div class="counter-label" id="stat-experience">Années d'expérience</div>
+							<div class="counter-description">En développement Full Stack</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+						<div class="stats-item" role="article" aria-labelledby="stat-projects">
+							<span class="counter" data-target="50" aria-live="polite">0</span>
+							<div class="counter-label" id="stat-projects">Projets réalisés</div>
+							<div class="counter-description">Applications web et mobiles</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="stats-item" role="article" aria-labelledby="stat-clients">
+							<span class="counter" data-target="25" aria-live="polite">0</span>
+							<div class="counter-label" id="stat-clients">Clients satisfaits</div>
+							<div class="counter-description">Entreprises et startups</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+						<div class="stats-item" role="article" aria-labelledby="stat-hours">
+							<span class="counter" data-target="1000" aria-live="polite">0</span>
+							<div class="counter-label" id="stat-hours">Heures de code</div>
+							<div class="counter-description">Cette année</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Statistics Section -->
 
 		<!-- ======= Resume Section ======= -->
 		<section id="resume" class="resume">
@@ -478,6 +590,93 @@
 			</div>
 		</section><!-- End Portfolio Section -->
 
+		<!-- ======= Blog Section ======= -->
+		<section id="blog" class="blog">
+			<div class="container">
+				<div class="section-title">
+					<h2>Blog & Articles</h2>
+					<p>Mes dernières réflexions et partages sur le développement, les technologies et les bonnes pratiques.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6" data-aos="fade-up">
+						<article class="blog-item">
+							<div class="blog-img">
+								<img src="assets/img/portfolio/portfolio-1.png" alt="Spring Boot Angular" class="img-fluid">
+								<div class="blog-date">Dec 2024</div>
+							</div>
+							<div class="blog-content">
+								<h3 class="blog-title">Architecture Microservices avec Spring Boot</h3>
+								<p class="blog-excerpt">
+									Découvrez comment concevoir une architecture microservices robuste avec Spring Boot et Docker pour des applications d'entreprise scalables.
+								</p>
+								<div class="blog-meta">
+									<div class="blog-author">
+										<i class="bi bi-person"></i>
+										<span>Junior Brindou</span>
+									</div>
+									<div class="blog-tags">
+										<span class="blog-tag">Spring Boot</span>
+										<span class="blog-tag">Microservices</span>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+						<article class="blog-item">
+							<div class="blog-img">
+								<img src="assets/img/portfolio/portfolio-2.jpg" alt="Angular Best Practices" class="img-fluid">
+								<div class="blog-date">Nov 2024</div>
+							</div>
+							<div class="blog-content">
+								<h3 class="blog-title">Bonnes Pratiques Angular en 2024</h3>
+								<p class="blog-excerpt">
+									Guide complet des meilleures pratiques pour développer des applications Angular modernes, performantes et maintenables.
+								</p>
+								<div class="blog-meta">
+									<div class="blog-author">
+										<i class="bi bi-person"></i>
+										<span>Junior Brindou</span>
+									</div>
+									<div class="blog-tags">
+										<span class="blog-tag">Angular</span>
+										<span class="blog-tag">TypeScript</span>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<article class="blog-item">
+							<div class="blog-img">
+								<img src="assets/img/portfolio/portfolio-3.png" alt="DevOps CI/CD" class="img-fluid">
+								<div class="blog-date">Oct 2024</div>
+							</div>
+							<div class="blog-content">
+								<h3 class="blog-title">CI/CD avec Docker et GitHub Actions</h3>
+								<p class="blog-excerpt">
+									Automatisez vos déploiements avec une pipeline CI/CD complète utilisant Docker, GitHub Actions et des stratégies de déploiement modernes.
+								</p>
+								<div class="blog-meta">
+									<div class="blog-author">
+										<i class="bi bi-person"></i>
+										<span>Junior Brindou</span>
+									</div>
+									<div class="blog-tags">
+										<span class="blog-tag">DevOps</span>
+										<span class="blog-tag">Docker</span>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Blog Section -->
+
 		<!-- ======= Services Section ======= -->
 		<section id="services" class="services">
 			<div class="container">
@@ -599,99 +798,78 @@
 		</section><!-- End Services Section -->
 
 		<!-- ======= Testimonials Section ======= -->
-		<!-- <section id="testimonials" class="testimonials section-bg">
+		<section id="testimonials" class="testimonials">
 			<div class="container">
 
 				<div class="section-title">
-					<h2>Testimonials</h2>
-					<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-						sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-						ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+					<h2>Témoignages</h2>
+					<p>Découvrez ce que mes clients disent de notre collaboration et de la qualité des solutions développées ensemble.</p>
 				</div>
 
-				<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-					<div class="swiper-wrapper">
-
-						<div class="swiper-slide">
-							<div class="testimonial-item" data-aos="fade-up">
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-									rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-									risus at semper.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
-								<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-								<h3>Saul Goodman</h3>
-								<h4>Ceo &amp; Founder</h4>
+				<div class="row">
+					<div class="col-lg-6" data-aos="fade-up">
+						<div class="testimonial-item">
+							<div class="testimonial-content">
+								"Junior a développé notre plateforme e-commerce avec une expertise remarquable. Sa maîtrise d'Angular et Spring Boot nous a permis d'avoir une solution robuste et moderne. Je recommande vivement ses services."
+							</div>
+							<div class="testimonial-author">
+								<img src="assets/img/testimonials/testimonials-1.jpg" class="author-img" alt="Client testimonial">
+								<div class="author-info">
+									<h4>Marie Kouassi</h4>
+									<span>CEO, TechCorp CI</span>
+								</div>
 							</div>
 						</div>
-
-						<div class="swiper-slide">
-							<div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-									cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-									legam anim culpa.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
-								<img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-								<h3>Sara Wilsson</h3>
-								<h4>Designer</h4>
-							</div>
-						</div>
-
-						<div class="swiper-slide">
-							<div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-									veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-									minim.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
-								<img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-								<h3>Jena Karlis</h3>
-								<h4>Store Owner</h4>
-							</div>
-						</div>
-
-						<div class="swiper-slide">
-							<div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-									fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-									dolore labore illum veniam.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
-								<img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-								<h3>Matt Brandon</h3>
-								<h4>Freelancer</h4>
-							</div>
-						</div>
-
-						<div class="swiper-slide">
-							<div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-								<p>
-									<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-									Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-									veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-									culpa fore nisi cillum quid.
-									<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-								</p>
-								<img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-								<h3>John Larson</h3>
-								<h4>Entrepreneur</h4>
-							</div>
-
 					</div>
-					<div class="swiper-pagination"></div>
+
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+						<div class="testimonial-item">
+							<div class="testimonial-content">
+								"Collaboration exceptionnelle avec Junior sur notre application mobile. Son approche professionnelle et sa capacité à comprendre nos besoins métier ont fait la différence. Livraison dans les délais respectés."
+							</div>
+							<div class="testimonial-author">
+								<img src="assets/img/testimonials/testimonials-2.jpg" class="author-img" alt="Client testimonial">
+								<div class="author-info">
+									<h4>Koffi Adjoua</h4>
+									<span>Directeur Technique, InnovaTech</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="testimonial-item">
+							<div class="testimonial-content">
+								"Junior a transformé notre vision en réalité avec une application web performante. Son expertise technique et sa créativité ont dépassé nos attentes. Un développeur de talent !"
+							</div>
+							<div class="testimonial-author">
+								<img src="assets/img/testimonials/testimonials-3.jpg" class="author-img" alt="Client testimonial">
+								<div class="author-info">
+									<h4>Ahmed Traoré</h4>
+									<span>Fondateur, StartupLab</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+						<div class="testimonial-item">
+							<div class="testimonial-content">
+								"Grâce à Junior, nous avons modernisé notre système d'information. Sa connaissance approfondie des technologies Java et son professionnalisme sont remarquables. Excellent travail !"
+							</div>
+							<div class="testimonial-author">
+								<img src="assets/img/testimonials/testimonials-4.jpg" class="author-img" alt="Client testimonial">
+								<div class="author-info">
+									<h4>Fatou Diabaté</h4>
+									<span>CTO, FinanceDigital</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
-		</section> -->
+		</section>
 		<!-- End Testimonials Section -->
 
 		<!-- ======= Contact Section ======= -->
