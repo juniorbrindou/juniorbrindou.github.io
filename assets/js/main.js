@@ -316,6 +316,47 @@
   window.addEventListener('load', updateExperienceYears);
 
   /**
+   * Animated Counters
+   */
+  const counters = select('.counter', true);
+  
+  function animateCounter(counter) {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const step = target / (duration / 16); // 60fps
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      
+      // Format the number (add commas for thousands)
+      const formattedNumber = Math.floor(current).toLocaleString();
+      counter.textContent = formattedNumber + (target >= 1000 ? '' : '');
+    }, 16);
+  }
+  
+  // Initialize counters when they come into view
+  function initCounters() {
+    counters.forEach(counter => {
+      const rect = counter.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isVisible && !counter.classList.contains('animated')) {
+        counter.classList.add('animated');
+        animateCounter(counter);
+      }
+    });
+  }
+  
+  // Run on scroll and initial load
+  window.addEventListener('scroll', initCounters);
+  window.addEventListener('load', initCounters);
+
+  /**
    * Theme Toggle Functionality
    */
   const themeToggle = select('#theme-toggle');
