@@ -315,4 +315,36 @@
   // Update experience years when page loads
   window.addEventListener('load', updateExperienceYears);
 
+  /**
+   * Theme Toggle Functionality
+   */
+  const themeToggle = select('#theme-toggle');
+  const themeIcon = select('#theme-icon');
+  
+  // Check for saved theme preference or default to light mode
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+  
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+  }
+  
+  function updateThemeIcon(theme) {
+    if (themeIcon) {
+      if (theme === 'dark') {
+        themeIcon.className = 'bi bi-sun-fill';
+      } else {
+        themeIcon.className = 'bi bi-moon-fill';
+      }
+    }
+  }
+
 })()

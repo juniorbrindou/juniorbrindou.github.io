@@ -20,6 +20,30 @@
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.18);
   --box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+  /* Light mode variables */
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --primary-color: #5A52FF;
+  --secondary-color: #00A3FF;
+  --accent-color: #00FF94;
+  --bg-color: #0D1117;
+  --card-bg: #161B22;
+  --text-primary: #F0F6FC;
+  --text-secondary: #8B949E;
+  --border-color: #30363D;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --light-bg: rgba(22, 27, 34, 0.95);
+  --glass-bg: rgba(22, 27, 34, 0.1);
+  --glass-border: rgba(240, 246, 252, 0.18);
 }
 
 /*--------------------------------------------------------------
@@ -27,9 +51,10 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: var(--text-color);
-  /* background: linear-gradient(135deg, var(--background-dark), var(--primary-color)); */
+  color: var(--text-primary);
+  background-color: var(--bg-color);
   background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -64,6 +89,43 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--box-shadow);
+}
+
+/*--------------------------------------------------------------
+# Theme Toggle Button
+--------------------------------------------------------------*/
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(180deg);
 }
 
 /*--------------------------------------------------------------
@@ -111,9 +173,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   padding: 0 15px;
-  background: rgba(4, 11, 20, 0.95);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
 }
 
 #header .profile img {
