@@ -39,9 +39,9 @@
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
 	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -104,39 +104,36 @@
 
 	<!-- ======= Header ======= -->
 	<header id="header">
-		<div class="d-flex flex-column">
+		<div class="d-flex flex-column h-100">
 
 			<div class="profile">
 				<img src="assets/img/junior.png"
-					alt="Photo de junior brindou" class="img-fluid rounded-circle">
-				<h1 class="text-light"><a href="index.html">Junior Brindou</a></h1>
-				<div class="social-links mt-3 text-center">
-					<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-					<a target="_blank"
-						href="https://www.facebook.com/people/Junior-Brindou/pfbid0Tt6wd9cWZ9WgEJ1njWN2sQoure8JvdPXa3uUgLVqigYp7B9jYx7xtnNKoqpQuLSol/"
-						class="facebook"><i class="bx bxl-facebook"></i></a>
-					<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-					<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-					<a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+					alt="Junior Brindou - Développeur Full Stack" class="img-fluid">
+				<h1><a href="index.html">Junior Brindou</a></h1>
+				<p class="tagline">Développeur Full Stack</p>
+				<div class="social-links">
+					<a href="https://github.com/juniorbrindou" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+					<a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+					<a href="https://twitter.com/juniorbrindou" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
+					<a href="mailto:225juniorbrindou@gmail.com" title="Email"><i class="bx bx-envelope"></i></a>
 				</div>
+				<span class="status-badge">Disponible</span>
 			</div>
 
-			<nav id="navbar" class="nav-menu navbar">
+			<nav id="navbar" class="nav-menu">
 				<ul>
 					<li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
 							<span>Accueil</span></a></li>
-					<li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
+					<li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>À propos</span></a>
 					</li>
+					<li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i>
+							<span>Compétences</span></a></li>
 					<li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
 							<span>CV</span></a></li>
-					<li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-							<span>Portfolio</span></a></li>
-					<li><a href="#blog" class="nav-link scrollto"><i class="bx bx-edit"></i>
-							<span>Blog</span></a></li>
+					<li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-folder"></i>
+							<span>Projets</span></a></li>
 					<li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
 							<span>Services</span></a></li>
-					<li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-chat"></i>
-							<span>Témoignages</span></a></li>
 					<li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
 							<span>Contact</span></a></li>
 				</ul>
@@ -147,8 +144,39 @@
 	<!-- ======= Hero Section ======= -->
 	<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
 		<div class="hero-container" data-aos="fade-in">
-			<h1>Junior Brindou</h1>
-			<p>Je suis <span class="typed" data-typed-items="Programmeur, Developpeur, Full-Stack"></span></p>
+			<p class="hero-subtitle">👋 Bonjour, je suis</p>
+			<h1>Junior <span class="gradient-text">Brindou</span></h1>
+			<p>Je suis <span class="typed" data-typed-items="Développeur Full Stack, Expert Java/Spring Boot, Passionné Angular, Créateur de Solutions"></span></p>
+			
+			<!-- Terminal Effect -->
+			<div class="hero-terminal">
+				<div class="terminal-header">
+					<span class="terminal-dot red"></span>
+					<span class="terminal-dot yellow"></span>
+					<span class="terminal-dot green"></span>
+				</div>
+				<div class="terminal-line">
+					<span class="prompt">$</span> <span class="command">whoami</span>
+				</div>
+				<div class="terminal-line">
+					Full Stack Developer @ ECOBANK
+				</div>
+				<div class="terminal-line">
+					<span class="prompt">$</span> <span class="command">cat skills.txt</span>
+				</div>
+				<div class="terminal-line">
+					Java • Spring Boot • Angular • .NET Core • SQL Server
+				</div>
+			</div>
+
+			<!-- Tech Stack Pills -->
+			<div class="hero-tech-stack">
+				<span class="tech-pill java"><i class="bx bxl-java"></i> Java</span>
+				<span class="tech-pill spring"><i class="bx bxl-spring-boot"></i> Spring Boot</span>
+				<span class="tech-pill angular"><i class="bx bxl-angular"></i> Angular</span>
+				<span class="tech-pill typescript"><i class="bx bxl-typescript"></i> TypeScript</span>
+				<span class="tech-pill docker"><i class="bx bxl-docker"></i> Docker</span>
+			</div>
 		</div>
 	</section><!-- End Hero -->
 
@@ -275,63 +303,166 @@
 					<p>Fort de mon expérience en développement d'applications d'entreprise, je maîtrise un large éventail de technologies modernes.</p>
 				</div>
 
-				<div class="row skills-content">
-					<div class="col-lg-6" data-aos="fade-up">
-						<div class="progress">
-							<span class="skill">Java/Spring Boot <i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+				<!-- Skills Categories -->
+				<div class="row g-4">
+					<!-- Backend -->
+					<div class="col-lg-4 col-md-6" data-aos="fade-up">
+						<div class="skill-card">
+							<div class="skill-card-header">
+								<div class="skill-icon backend">
+									<i class="bi bi-server"></i>
+								</div>
+								<h3>Backend</h3>
 							</div>
-						</div>
-
-						<div class="progress">
-							<span class="skill">Angular <i class="val">85%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="progress">
-							<span class="skill">SQL (SQL Server, MySQL) <i class="val">85%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="progress">
-							<span class="skill">ASP.NET Core <i class="val">80%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="skill-card-body">
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-java"></i>
+										<span>Java / Spring Boot</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 90%"></div>
+									</div>
+									<span class="skill-percent">90%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bi bi-database"></i>
+										<span>SQL Server / MySQL</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 85%"></div>
+									</div>
+									<span class="skill-percent">85%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bi bi-microsoft"></i>
+										<span>ASP.NET Core</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 80%"></div>
+									</div>
+									<span class="skill-percent">80%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bi bi-braces"></i>
+										<span>REST APIs</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 88%"></div>
+									</div>
+									<span class="skill-percent">88%</span>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-						<div class="progress">
-							<span class="skill">HTML/CSS/JavaScript <i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+					<!-- Frontend -->
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+						<div class="skill-card">
+							<div class="skill-card-header">
+								<div class="skill-icon frontend">
+									<i class="bi bi-palette"></i>
+								</div>
+								<h3>Frontend</h3>
+							</div>
+							<div class="skill-card-body">
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-angular"></i>
+										<span>Angular</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 85%"></div>
+									</div>
+									<span class="skill-percent">85%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-typescript"></i>
+										<span>TypeScript</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 85%"></div>
+									</div>
+									<span class="skill-percent">85%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-html5"></i>
+										<span>HTML / CSS / JS</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 90%"></div>
+									</div>
+									<span class="skill-percent">90%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-bootstrap"></i>
+										<span>Bootstrap / Tailwind</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 80%"></div>
+									</div>
+									<span class="skill-percent">80%</span>
+								</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="progress">
-							<span class="skill">Git/GitHub <i class="val">85%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+					<!-- DevOps & Tools -->
+					<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="skill-card">
+							<div class="skill-card-header">
+								<div class="skill-icon devops">
+									<i class="bi bi-gear"></i>
+								</div>
+								<h3>DevOps & Outils</h3>
 							</div>
-						</div>
-
-						<div class="progress">
-							<span class="skill">Docker <i class="val">75%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="progress">
-							<span class="skill">REST APIs <i class="val">85%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="skill-card-body">
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-git"></i>
+										<span>Git / GitHub</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 88%"></div>
+									</div>
+									<span class="skill-percent">88%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bx bxl-docker"></i>
+										<span>Docker</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 75%"></div>
+									</div>
+									<span class="skill-percent">75%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bi bi-kanban"></i>
+										<span>Jira / Agile Scrum</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 85%"></div>
+									</div>
+									<span class="skill-percent">85%</span>
+								</div>
+								<div class="skill-item">
+									<div class="skill-info">
+										<i class="bi bi-terminal"></i>
+										<span>CI/CD Pipelines</span>
+									</div>
+									<div class="skill-level">
+										<div class="skill-progress" style="--progress: 70%"></div>
+									</div>
+									<span class="skill-percent">70%</span>
+								</div>
 							</div>
 						</div>
 					</div>
