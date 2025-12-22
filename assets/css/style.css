@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
 }
@@ -85,8 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Glassmorphism Effect */
 .glass-effect {
   background: var(--glass-bg);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--box-shadow);
 }
@@ -174,8 +175,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   padding: 0 15px;
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-right: 1px solid var(--border-color);
   box-shadow: var(--shadow);
 }
@@ -200,10 +201,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  text-align-last: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -360,8 +362,8 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 300px;
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -917,8 +919,8 @@ section {
   color: #fff;
   font-size: 24px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   width: 40px;
   height: 40px;
   display: flex;
@@ -1192,6 +1194,7 @@ section {
 
 .testimonials .testimonial-item {
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 40px;
