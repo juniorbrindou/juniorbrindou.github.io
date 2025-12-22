@@ -9,6 +9,21 @@
   "use strict";
 
   /**
+   * Page Loader
+   */
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+      setTimeout(() => {
+        loader.classList.add('loaded');
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }, 2000); // Minimum display time for effect
+    }
+  });
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {

@@ -35,7 +35,8 @@
 	<link rel="canonical" href="https://juniorbrindou.github.io/">
 
 	<!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/logo-jb-hex.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/img/favicon.png" rel="icon" type="image/png">
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
@@ -94,6 +95,35 @@
 
 <body>
 
+	<!-- ======= Page Loader ======= -->
+	<div id="page-loader" class="page-loader">
+		<div class="loader-terminal">
+			<div class="loader-terminal-header">
+				<span class="terminal-btn red"></span>
+				<span class="terminal-btn yellow"></span>
+				<span class="terminal-btn green"></span>
+				<span class="terminal-title">junior@portfolio ~ %</span>
+			</div>
+			<div class="loader-terminal-body">
+				<div class="loader-line">
+					<span class="loader-prompt">$</span>
+					<span class="loader-text">npm run build:portfolio</span>
+				</div>
+				<div class="loader-line loader-line-2">
+					<span class="loader-comment">// Compiling assets...</span>
+				</div>
+				<div class="loader-line loader-line-3">
+					<span class="loader-success">✓</span>
+					<span class="loader-text">Loading components</span>
+					<span class="loader-dots"></span>
+				</div>
+				<div class="loader-progress">
+					<div class="loader-progress-bar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- ======= Mobile nav toggle button ======= -->
 	<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -107,8 +137,11 @@
 		<div class="d-flex flex-column h-100">
 
 			<div class="profile">
+				<a href="#hero" class="profile-logo">
+					<img src="assets/img/logo-jb-hex.svg" alt="JB Logo" class="logo-img">
+				</a>
 				<img src="assets/img/junior.png"
-					alt="Junior Brindou - Développeur Full Stack" class="img-fluid">
+					alt="Junior Brindou - Développeur Full Stack" class="img-fluid profile-photo">
 				<h1><a href="index.html">Junior Brindou</a></h1>
 				<p class="tagline">Développeur Full Stack</p>
 				<div class="social-links">

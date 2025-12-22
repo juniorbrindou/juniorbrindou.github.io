@@ -96,6 +96,149 @@
 }
 
 /*--------------------------------------------------------------
+# Page Loader
+--------------------------------------------------------------*/
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-terminal {
+  width: 420px;
+  max-width: 90vw;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  animation: loaderPulse 2s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { box-shadow: var(--shadow-xl); }
+  50% { box-shadow: var(--shadow-glow), var(--shadow-xl); }
+}
+
+.loader-terminal-header {
+  background: var(--bg-secondary);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.loader-terminal-header .terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.loader-terminal-header .terminal-btn.red { background: #FF5F56; }
+.loader-terminal-header .terminal-btn.yellow { background: #FFBD2E; }
+.loader-terminal-header .terminal-btn.green { background: #27CA40; }
+
+.loader-terminal-header .terminal-title {
+  margin-left: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.loader-terminal-body {
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}
+
+.loader-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeInLine 0.5s ease forwards;
+}
+
+.loader-line-2 { animation-delay: 0.3s; }
+.loader-line-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInLine {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.loader-prompt {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.loader-text {
+  color: var(--text-primary);
+}
+
+.loader-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.loader-success {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.loader-dots::after {
+  content: '';
+  animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+.loader-progress {
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  margin-top: 20px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInLine 0.5s ease 0.9s forwards;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  animation: loadingProgress 1.5s ease 1s forwards;
+}
+
+@keyframes loadingProgress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
@@ -236,7 +379,31 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--border-color);
 }
 
-#header .profile img {
+#header .profile .profile-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: all var(--transition-base);
+}
+
+#header .profile .profile-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+#header .profile .logo-img {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+#header .profile .logo-img:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+#header .profile .profile-photo {
   margin: 0 auto 15px;
   display: block;
   width: 120px;
@@ -248,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 4px var(--bg-color), var(--shadow-glow);
 }
 
-#header .profile img:hover {
+#header .profile .profile-photo:hover {
   transform: scale(1.05) rotate(3deg);
   box-shadow: 0 0 0 4px var(--bg-color), 0 0 30px rgba(var(--accent-color-rgb), 0.5);
 }
