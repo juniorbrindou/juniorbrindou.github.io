@@ -308,6 +308,16 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
 }
 
+/* Mobile: position theme toggle below menu toggle */
+@media (max-width: 1199px) {
+  .theme-toggle {
+    top: 70px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .theme-toggle:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
