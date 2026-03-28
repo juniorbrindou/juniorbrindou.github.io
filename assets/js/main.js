@@ -202,7 +202,8 @@
               <img src="assets/img/logo-jb-new.png" alt="JB Logo" class="logo-img">
             </a>
             <img src="assets/img/junior.png" alt="${data.header.name}" class="img-fluid profile-photo">
-            <h1 class="text-light"><a href="${pathPrefix}#hero">${data.header.name}</a></h1>
+            <h1 class=""><a href="${pathPrefix}#hero">${data.header.name}</a></h1>
+            <p class="tagline">${data.header.tagline}</p>
             <div class="social-links">
               <a href="https://github.com/juniorbrindou" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
               <a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
@@ -213,7 +214,7 @@
           </div>
 
           <nav id="navbar" class="nav-menu navbar">
-            <ul>
+            <ul class="pb-4">
               <li><a href="${pathPrefix}#hero" class="nav-link scrollto ${isDetails ? '' : 'active'}"><i class="bx bx-home"></i> <span>${nav.home}</span></a></li>
               <li><a href="${pathPrefix}#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>${nav.about}</span></a></li>
               <li><a href="${pathPrefix}#skills" class="nav-link scrollto"><i class="bx bx-list-check"></i> <span>${nav.skills}</span></a></li>
@@ -223,6 +224,12 @@
               <li><a href="${pathPrefix}#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>${nav.contact}</span></a></li>
             </ul>
           </nav>
+          
+          <div class="sidebar-footer mt-auto py-3 px-4 border-top text-center">
+            <p class="mb-0 text-muted" style="font-size: 11px;">
+              &copy; ${new Date().getFullYear()} <strong>Junior Brindou</strong>.<br> Tous droits réservés.
+            </p>
+          </div>
         </div>
       </header>
     `;
