@@ -391,14 +391,20 @@
       }
 
       // Simple Text Elements (data-content)
+      const currentYear = new Date().getFullYear();
       document.querySelectorAll('[data-content]').forEach(el => {
         const key = el.getAttribute('data-content');
         const value = key.split('.').reduce((obj, i) => obj ? obj[i] : null, data);
         if (value) {
+            let processedValue = value;
+            if (typeof value === 'string') {
+              processedValue = value.replace('{year}', currentYear);
+            }
+
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.value = value;
+                el.value = processedValue;
             } else {
-                el.innerHTML = value;
+                el.innerHTML = processedValue;
             }
         }
       });

@@ -220,7 +220,7 @@
     "items": [
       {
         "title": "Développement Web Responsive",
-        "features": ["Sites web modernes", "Multi-plateformes", "Mobile-first", "Performance"]
+        "features": ["Sites web modernes", "Mobile-first", "Performance optimisée","Visibilité sur les moteurs de recherche"]
       },
       {
         "title": "Applications Mobiles",
@@ -253,5 +253,8 @@
       "email": "juniorbrindou225@outlook.fr",
       "phone": "+225 07 79 84 37 57"
     }
+  },
+  "footer": {
+    "copyright": "&copy; {year} <strong>Junior Brindou</strong>. Tous droits réservés."
   }
 }
