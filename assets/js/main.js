@@ -360,27 +360,27 @@
       if (!response.ok) return;
       const data = await response.json();
 
+      // Calculate experience years
+      const startDate = new Date(data.config.careerStartDate || "2020-03-01");
+      const diffMs = Date.now() - startDate.getTime();
+      const ageDate = new Date(diffMs);
+      const expYears = Math.abs(ageDate.getUTCFullYear() - 1970);
+
       // Update Meta Tags
-      document.title = data.meta.title;
+      document.title = data.meta.title.replace('{exp}', expYears);
       const metaValues = {
-        'description': data.meta.description,
+        'description': data.meta.description.replace('{exp}', expYears),
         'keywords': data.meta.keywords,
-        'og:title': data.meta.title,
-        'og:description': data.meta.description,
-        'twitter:title': data.meta.title,
-        'twitter:description': data.meta.description
+        'og:title': data.meta.title.replace('{exp}', expYears),
+        'og:description': data.meta.description.replace('{exp}', expYears),
+        'twitter:title': data.meta.title.replace('{exp}', expYears),
+        'twitter:description': data.meta.description.replace('{exp}', expYears)
       };
 
       for (const [name, value] of Object.entries(metaValues)) {
         const meta = document.querySelector(`meta[name="${name}"], meta[property="${name}"]`);
         if (meta) meta.setAttribute('content', value);
       }
-
-      // Calculate experience years
-      const startDate = new Date(data.config.careerStartDate || "2020-03-01");
-      const diffMs = Date.now() - startDate.getTime();
-      const ageDate = new Date(diffMs);
-      const expYears = Math.abs(ageDate.getUTCFullYear() - 1970);
 
       // Simple Text Elements (data-content)
       const currentYear = new Date().getFullYear();
