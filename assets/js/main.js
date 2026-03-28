@@ -531,17 +531,32 @@
     }
 
     if (itemsContainer && portfolio.items) {
-      itemsContainer.innerHTML = portfolio.items.map(item => `
+      itemsContainer.innerHTML = portfolio.items.map((item, idx) => {
+        // Prepare gallery links (first image is visible, others are hidden)
+        const gallery = item.gallery || [item.img];
+        const extraImages = gallery.slice(1).map(img => 
+          `<a href="${img}" data-gallery="gallery-${idx}" class="portfolio-lightbox" title="${item.title}"></a>`
+        ).join('');
+
+        return `
         <div class="col-lg-4 col-md-6 portfolio-item ${item.category}">
           <div class="portfolio-wrap">
-            <img src="${item.img}" class="img-fluid" alt="${item.title}">
-            <div class="portfolio-links">
-              <a href="${item.img}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${item.title}"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" title="Plus de détails"><i class="bx bx-link"></i></a>
+            <div class="portfolio-img-container">
+              <img src="${item.img}" class="img-fluid" alt="${item.title}">
+              <div class="portfolio-links">
+                <a href="${item.img}" data-gallery="gallery-${idx}" class="portfolio-lightbox" title="${item.title}"><i class="bx bx-plus"></i></a>
+                <div style="display:none">${extraImages}</div>
+                <a href="portfolio-details.html" title="Plus de détails"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info-bottom">
+              <h4>${item.title}</h4>
+              <p>${item.description || ''}</p>
             </div>
           </div>
         </div>
-      `).join('');
+        `;
+      }).join('');
     }
   }
 

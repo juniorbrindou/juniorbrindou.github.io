@@ -153,7 +153,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "description": "Découvrez mes projets récemment réalisés et les technologies utilisées.",
+    "description": "Découvrez une sélection de mes projets récents, illustrant mon expertise technique et ma capacité à résoudre des problématiques complexes.",
     "filters": [
       { "id": "*", "label": "Tout" },
       { "id": ".filter-app", "label": "App" },
@@ -161,15 +161,57 @@
       { "id": ".filter-web", "label": "Web" }
     ],
     "items": [
-      { "title": "Souralè Groupe", "category": "filter-app", "img": "assets/img/portfolio/portfolio-1.png" },
-      { "title": "Web 3", "category": "filter-web", "img": "assets/img/portfolio/portfolio-2.jpg" },
-      { "title": "App 2", "category": "filter-app", "img": "assets/img/portfolio/portfolio-3.png" },
-      { "title": "Card 2", "category": "filter-card", "img": "assets/img/portfolio/portfolio-4.png" },
-      { "title": "Web 2", "category": "filter-web", "img": "assets/img/portfolio/portfolio-5.jpg" },
-      { "title": "App 3", "category": "filter-app", "img": "assets/img/portfolio/portfolio-6.png" },
-      { "title": "Card 1", "category": "filter-card", "img": "assets/img/portfolio/portfolio-7.png" },
-      { "title": "Card 3", "category": "filter-card", "img": "assets/img/portfolio/portfolio-8.jpg" },
-      { "title": "Web 3", "category": "filter-web", "img": "assets/img/portfolio/portfolio-9.jpg" }
+      { 
+        "title": "Souralè Groupe", 
+        "category": "filter-app", 
+        "img": "assets/img/portfolio/portfolio-1.png",
+        "description": "Plateforme web de gestion de stock et logistique pour le secteur événementiel.",
+        "gallery": [
+          "assets/img/portfolio/portfolio-1.png",
+          "assets/img/portfolio/portfolio-3.png"
+        ]
+      },
+      { 
+        "title": "Application MSA", 
+        "category": "filter-web", 
+        "img": "assets/img/portfolio/portfolio-2.jpg",
+        "description": "Système de gestion académique pour le suivi des étudiants et des inscriptions.",
+        "gallery": [
+          "assets/img/portfolio/portfolio-2.jpg",
+          "assets/img/portfolio/portfolio-5.jpg"
+        ]
+      },
+      { 
+        "title": "Innova7th Dashboard", 
+        "category": "filter-app", 
+        "img": "assets/img/portfolio/portfolio-3.png",
+        "description": "Tableau de bord multi-tenant avec provisioning automatique AWS.",
+        "gallery": [
+          "assets/img/portfolio/portfolio-3.png",
+          "assets/img/portfolio/portfolio-6.png"
+        ]
+      },
+      { 
+        "title": "Design System UI", 
+        "category": "filter-card", 
+        "img": "assets/img/portfolio/portfolio-4.png",
+        "description": "Bibliothèque de composants UI modernes pour applications SaaS.",
+        "gallery": ["assets/img/portfolio/portfolio-4.png"]
+      },
+      { 
+        "title": "E-commerce Hub", 
+        "category": "filter-web", 
+        "img": "assets/img/portfolio/portfolio-5.jpg",
+        "description": "Solution de vente en ligne intégrée avec gestion dynamique des stocks.",
+        "gallery": ["assets/img/portfolio/portfolio-5.jpg", "assets/img/portfolio/portfolio-9.jpg"]
+      },
+      { 
+        "title": "Task Manager Mobile", 
+        "category": "filter-app", 
+        "img": "assets/img/portfolio/portfolio-6.png",
+        "description": "Application mobile Flutter pour la gestion collaborative de tâches.",
+        "gallery": ["assets/img/portfolio/portfolio-6.png"]
+      }
     ]
   },
   "services": {
