@@ -482,19 +482,34 @@
     const container = document.querySelector(`[data-list="resume.${type}"]`);
     if (!container || !items) return;
 
-    container.innerHTML = items.map(item => `
-      <div class="resume-item">
-        <h4>${item.degree || item.title}</h4>
-        <h5>${item.year || item.period}</h5>
-        <p><em>${item.school || item.company}</em></p>
-        ${item.desc ? `<p>${item.desc}</p>` : ''}
-        ${item.tasks ? `
-          <ul>
-            ${item.tasks.map(task => `<li>${task}</li>`).join('')}
-          </ul>
-        ` : ''}
-      </div>
-    `).join('');
+    if (type === 'education') {
+      container.innerHTML = `
+        <div class="resume-item">
+          ${items.map(item => `
+            <div class="mb-4">
+              <h4>${item.degree}</h4>
+              <h5>${item.year}</h5>
+              <p><em>${item.school}</em></p>
+              ${item.desc ? `<p>${item.desc}</p>` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else {
+      container.innerHTML = items.map(item => `
+        <div class="resume-item">
+          <h4>${item.title}</h4>
+          <h5>${item.period}</h5>
+          <p><em>${item.company}</em></p>
+          ${item.desc ? `<p>${item.desc}</p>` : ''}
+          ${item.tasks ? `
+            <ul>
+              ${item.tasks.map(task => `<li>${task}</li>`).join('')}
+            </ul>
+          ` : ''}
+        </div>
+      `).join('');
+    }
   }
 
   function renderServices(items) {
