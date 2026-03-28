@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Junior Brindou - Développeur .NET / Angular | Portfolio",
-    "description": "Développeur Full Stack spécialisé en ASP.NET Core et Angular. +4 ans d'expérience.",
-    "keywords": "Junior Brindou, développeur full stack, ASP.NET Core, C#, Angular, Flutter, Abidjan"
+    "description": "Développeur Full Stack spécialisé en ASP.NET et Angular. +4 ans d'expérience.",
+    "keywords": "Junior Brindou, développeur full stack, ASP.NET, C#, Angular, Flutter, Abidjan"
   },
   "header": {
     "name": "Junior Brindou",
@@ -29,7 +29,7 @@
     ],
     "terminal": {
       "whoami": "Architecte de solution digitales",
-      "skills": "ASP.NET Core • C# • Angular • Laravel • Flutter • SQL Server"
+      "skills": "ASP.NET • C# • Angular • Laravel • Flutter • SQL Server"
     }
   },
   "about": {
@@ -47,7 +47,7 @@
       "freelance": "Disponible"
     },
     "description": [
-      "Développeur Full Stack spécialisé en ASP.NET Core et Angular avec plus de 4 ans d'expérience dans le développement d'applications web et mobiles.",
+      "Développeur Full Stack spécialisé en ASP.NET et Angular avec plus de 4 ans d'expérience dans le développement d'applications web et mobiles.",
       "Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique, en mettant l'accent sur l'automatisation CI/CD, la sécurité et les architectures cloud (AWS, Docker)."
     ]
   },
@@ -58,7 +58,7 @@
       {
         "name": "Backend",
         "items": [
-          { "name": "ASP.NET Core / C#", "level": "90%" },
+          { "name": "ASP.NET / C#", "level": "90%" },
           { "name": "SQL Server / MySQL / PostgreSQL", "level": "85%" },
           { "name": "PHP / Laravel", "level": "75%" },
           { "name": "REST APIs", "level": "90%" }
@@ -99,7 +99,7 @@
     "description": "Développeur Full Stack passionné avec une solide expérience dans la création d'applications web et mobiles modernes.",
     "profil": {
       "name": "Brindou Gnépa Junior",
-      "desc": "Développeur Full Stack ASP.NET Core & Angular avec une expertise en API REST, CI/CD et architectures cloud.",
+      "desc": "Développeur Full Stack ASP.NET & Angular avec une expertise en API REST, CI/CD et architectures cloud.",
       "address": "Abidjan, Côte d'Ivoire",
       "phone": "+225 07 79 84 37 57",
       "email": "juniorbrindou225@outlook.fr"
@@ -134,7 +134,7 @@
           "Conception de l'architecture backend avec RBAC (Role-Based Access Control).",
           "Mise en place de l'isolation des données par tenant.",
           "Automatisation des pipelines CI/CD pour le déploiement continu.",
-          "Technologies : ASP.NET Core 7, Docker, AWS, SQL Server"
+          "Technologies : ASP.NET , Docker, AWS, SQL Server"
         ]
       },
       {
