@@ -466,17 +466,17 @@
             <h3>${cat.name}</h3>
           </div>
           <div class="skill-card-body">
-            ${cat.items.map(skill => `
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>${skill.name}</span>
-                </div>
-                <div class="skill-level">
-                  <div class="skill-progress" style="--progress: ${skill.level}"></div>
-                </div>
-                <span class="skill-percent">${skill.level}</span>
+            ${cat.items.map(skill => {
+              const levelInt = parseInt(skill.level) || 0;
+              const levelClass = levelInt >= 90 ? 'expert' : levelInt >= 80 ? 'pro' : '';
+              return `
+              <div class="skill-tag ${levelClass}">
+                <i class="bi bi-patch-check-fill"></i>
+                <span>${skill.name}</span>
+                ${levelInt >= 90 ? '<span class="level-dot"></span>' : ''}
               </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       </div>
