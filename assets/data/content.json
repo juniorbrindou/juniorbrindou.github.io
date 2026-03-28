@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "title": "Junior Brindou - Développeur .NET / Angular | Portfolio",
+    "description": "Développeur Full Stack spécialisé en ASP.NET Core et Angular. +4 ans d'expérience.",
+    "keywords": "Junior Brindou, développeur full stack, ASP.NET Core, C#, Angular, Flutter, Abidjan"
+  },
+  "header": {
+    "name": "Junior Brindou",
+    "tagline": "Développeur .NET / Angular",
+    "status": "Disponible",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "resume": "CV",
+      "portfolio": "Projets",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "subtitle": "👋 Bonjour, je suis",
+    "name": "Junior Brindou",
+    "typedItems": [
+      "Développeur Full Stack",
+      "Expert en PHP/Laravel",
+      "Passionné du framework Angular",
+      "Créateur de Solutions innovantes"
+    ],
+    "terminal": {
+      "whoami": "Architecte de solution digitales",
+      "skills": "ASP.NET Core • C# • Angular • Laravel • Flutter • SQL Server"
+    }
+  },
+  "about": {
+    "title": "Me Concernant",
+    "lead": "Développeur Full Stack passionné avec plus de 4 ans d'expérience dans la création d'applications web et mobiles innovantes.",
+    "subtitle": "Développeur .NET / Angular & Freelance",
+    "info": {
+      "expertise": "Web & Mobile",
+      "website": "juniorbrindou.github.io",
+      "phone": "+225 07 79 84 37 57",
+      "city": "Abidjan, Côte d'Ivoire",
+      "experience": "4+ années",
+      "degree": "Licence Pro Génie Logiciel",
+      "email": "juniorbrindou225@outlook.fr",
+      "freelance": "Disponible"
+    },
+    "description": [
+      "Développeur Full Stack spécialisé en ASP.NET Core et Angular avec plus de 4 ans d'expérience dans le développement d'applications web et mobiles.",
+      "Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique, en mettant l'accent sur l'automatisation CI/CD, la sécurité et les architectures cloud (AWS, Docker)."
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "description": "Fort de mon expérience en développement d'applications d'entreprise, je maîtrise un large éventail de technologies modernes.",
+    "categories": [
+      {
+        "name": "Backend",
+        "items": [
+          { "name": "ASP.NET Core / C#", "level": "90%" },
+          { "name": "SQL Server / MySQL / PostgreSQL", "level": "85%" },
+          { "name": "PHP / Laravel", "level": "75%" },
+          { "name": "REST APIs", "level": "90%" }
+        ]
+      },
+      {
+        "name": "Frontend & Mobile",
+        "items": [
+          { "name": "Angular 14+", "level": "90%" },
+          { "name": "React Js", "level": "70%" },
+          { "name": "Flutter", "level": "75%" },
+          { "name": "TypeScript", "level": "85%" }
+        ]
+      },
+      {
+        "name": "DevOps & Outils",
+        "items": [
+          { "name": "Git / GitHub", "level": "88%" },
+          { "name": "Docker / AWS", "level": "80%" },
+          { "name": "Linux (Ubuntu) / IIS", "level": "80%" },
+          { "name": "CI/CD / Agile", "level": "85%" }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "title": "Statistiques",
+    "description": "Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.",
+    "items": [
+      { "label": "Années d'expérience", "target": 4, "desc": "En développement Full Stack" },
+      { "label": "Projets réalisés", "target": 50, "desc": "Applications web et mobiles" },
+      { "label": "Clients satisfaits", "target": 25, "desc": "Entreprises et startups" },
+      { "label": "Heures de code", "target": 1000, "desc": "Cette année" }
+    ]
+  },
+  "resume": {
+    "title": "Curriculum Vitae",
+    "description": "Développeur Full Stack passionné avec une solide expérience dans la création d'applications web et mobiles modernes.",
+    "profil": {
+      "name": "Brindou Gnépa Junior",
+      "desc": "Développeur Full Stack ASP.NET Core & Angular avec une expertise en API REST, CI/CD et architectures cloud.",
+      "address": "Abidjan, Côte d'Ivoire",
+      "phone": "+225 07 79 84 37 57",
+      "email": "juniorbrindou225@outlook.fr"
+    },
+    "education": [
+      {
+        "degree": "Licence Professionnelle en Génie Logiciel",
+        "year": "2022",
+        "school": "EDHEC - École des Hautes Études Commerciales, Abidjan",
+        "desc": "Spécialisation en développement d'applications et génie logiciel."
+      },
+      {
+        "degree": "BTS Informatique Développeur d'Application",
+        "year": "2018",
+        "school": "AGITEL Formation, Abidjan",
+        "desc": "Formation en développement logiciel et programmation."
+      },
+      {
+        "degree": "Baccalauréat Série C",
+        "year": "2016",
+        "school": "Collège Le Classique, Abidjan",
+        "desc": "Baccalauréat scientifique option mathématiques."
+      }
+    ],
+    "experience": [
+      {
+        "title": "Développeur Full Stack .NET",
+        "period": "Avril 2023 - Présent",
+        "company": "Innova7th (Freelance)",
+        "tasks": [
+          "Développement d'une application multi-tenant avec provisioning dynamique.",
+          "Conception de l'architecture backend avec RBAC (Role-Based Access Control).",
+          "Mise en place de l'isolation des données par tenant.",
+          "Automatisation des pipelines CI/CD pour le déploiement continu.",
+          "Technologies : ASP.NET Core 7, Docker, AWS, SQL Server"
+        ]
+      },
+      {
+        "title": "Développeur Web Full Stack",
+        "period": "Décembre 2020 - Février 2023",
+        "company": "INGES-CI, Abidjan",
+        "tasks": [
+          "Développement de MailView, une application de gestion de courriers.",
+          "Conception de l'architecture API RESTful.",
+          "Développement front-end avec Angular 14.",
+          "Mise en place du déploiement CI/CD.",
+          "Technologies : ASP.NET, Angular 14, SQL Server"
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Découvrez mes projets récemment réalisés et les technologies utilisées.",
+    "filters": [
+      { "id": "*", "label": "Tout" },
+      { "id": ".filter-app", "label": "App" },
+      { "id": ".filter-card", "label": "Design" },
+      { "id": ".filter-web", "label": "Web" }
+    ],
+    "items": [
+      { "title": "Souralè Groupe", "category": "filter-app", "img": "assets/img/portfolio/portfolio-1.png" },
+      { "title": "Web 3", "category": "filter-web", "img": "assets/img/portfolio/portfolio-2.jpg" },
+      { "title": "App 2", "category": "filter-app", "img": "assets/img/portfolio/portfolio-3.png" },
+      { "title": "Card 2", "category": "filter-card", "img": "assets/img/portfolio/portfolio-4.png" },
+      { "title": "Web 2", "category": "filter-web", "img": "assets/img/portfolio/portfolio-5.jpg" },
+      { "title": "App 3", "category": "filter-app", "img": "assets/img/portfolio/portfolio-6.png" },
+      { "title": "Card 1", "category": "filter-card", "img": "assets/img/portfolio/portfolio-7.png" },
+      { "title": "Card 3", "category": "filter-card", "img": "assets/img/portfolio/portfolio-8.jpg" },
+      { "title": "Web 3", "category": "filter-web", "img": "assets/img/portfolio/portfolio-9.jpg" }
+    ]
+  },
+  "services": {
+    "title": "Prestations",
+    "description": "En tant que développeur web/mobile expérimenté, je propose une gamme complète de services numériques adaptés à vos besoins.",
+    "items": [
+      {
+        "title": "Développement Web Responsive",
+        "features": ["Sites web modernes", "Multi-plateformes", "Mobile-first", "Performance"]
+      },
+      {
+        "title": "Applications Mobiles",
+        "features": ["iOS et Android", "Cross-platform", "PWA", "API natives"]
+      },
+      {
+        "title": "Architecture & API",
+        "features": ["API RESTful", "Microservices", "Intégration", "Documentation"]
+      },
+      {
+        "title": "E-commerce",
+        "features": ["Solutions sur mesure", "Paiement en ligne", "Gestion de stock", "Optimisation"]
+      },
+      {
+        "title": "Maintenance & Support",
+        "features": ["Suivi technique", "Monitoring", "Mises à jour", "Sécurité"]
+      },
+      {
+        "title": "Optimisation & SEO",
+        "features": ["Performance", "Référencement", "Analytics", "Conseils"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "description": "Découvrez ce que mes clients disent de notre collaboration.",
+    "items": [
+      {
+        "text": "Junior a développé notre plateforme e-commerce avec une expertise remarquable. Sa maîtrise d'Angular et Laravel nous a permis d'avoir une solution robuste et moderne.",
+        "author": "Marie Kouassi",
+        "role": "CEO, TechCorp CI",
+        "img": "assets/img/testimonials/testimonials-1.jpg"
+      },
+      {
+        "text": "Collaboration exceptionnelle avec Junior sur notre application mobile. Son approche professionnelle et sa capacité à comprendre nos besoins métier ont fait la différence.",
+        "author": "Koffi Adjoua",
+        "role": "Directeur Technique, InnovaTech",
+        "img": "assets/img/testimonials/testimonials-2.jpg"
+      },
+      {
+        "text": "Junior a transformé notre vision en réalité avec une application web performante. Son expertise technique et sa créativité ont dépassé nos attentes.",
+        "author": "Ahmed Traoré",
+        "role": "Fondateur, StartupLab",
+        "img": "assets/img/testimonials/testimonials-3.jpg"
+      },
+      {
+        "text": "Grâce à Junior, nous avons modernisé notre système d'information. Sa connaissance approfondie des technos PHP et son professionnalisme sont remarquables.",
+        "author": "Fatou Diabaté",
+        "role": "CTO, FinanceDigital",
+        "img": "assets/img/testimonials/testimonials-4.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Si vous avez besoin d'un développeur compétent et passionné, n'hésitez pas à me contacter.",
+    "info": {
+      "address": "Abidjan, Côte d'Ivoire",
+      "email": "juniorbrindou225@outlook.fr",
+      "phone": "+225 07 79 84 37 57"
+    }
+  }
+}

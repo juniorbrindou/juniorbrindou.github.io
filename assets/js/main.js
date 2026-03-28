@@ -137,17 +137,20 @@
   /**
    * Hero type effect
    */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+  /**
+   * Hero type effect - MOVED TO loadContent for dynamic sync
+   */
+  function initTyped(strings) {
+    const typed = select('.typed')
+    if (typed && strings) {
+      new Typed('.typed', {
+        strings: strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    }
   }
 
   /**
@@ -168,41 +171,8 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Porfolio isotope and filter - MOVED TO loadContent for dynamic rendering
    */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
 
   /**
    * Portfolio details slider
@@ -369,8 +339,8 @@
   const themeToggle = select('#theme-toggle');
   const themeIcon = select('#theme-icon');
   
-  // Check for saved theme preference or default to dark mode (developer preference)
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  // Check for saved theme preference or default to light mode
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
   
@@ -388,11 +358,243 @@
   function updateThemeIcon(theme) {
     if (themeIcon) {
       if (theme === 'dark') {
-        themeIcon.className = 'bi bi-sun-fill';
+          themeIcon.className = 'bi bi-sun-fill';
       } else {
-        themeIcon.className = 'bi bi-moon-fill';
+          themeIcon.className = 'bi bi-moon-fill';
       }
     }
   }
 
-})()
+  /**
+   * Load Content from content.json
+   */
+  async function loadContent() {
+    try {
+      const response = await fetch('assets/data/content.json');
+      if (!response.ok) return;
+      const data = await response.json();
+
+      // Update Meta Tags
+      document.title = data.meta.title;
+      const metaValues = {
+        'description': data.meta.description,
+        'keywords': data.meta.keywords,
+        'og:title': data.meta.title,
+        'og:description': data.meta.description,
+        'twitter:title': data.meta.title,
+        'twitter:description': data.meta.description
+      };
+
+      for (const [name, value] of Object.entries(metaValues)) {
+        const meta = document.querySelector(`meta[name="${name}"], meta[property="${name}"]`);
+        if (meta) meta.setAttribute('content', value);
+      }
+
+      // Simple Text Elements (data-content)
+      document.querySelectorAll('[data-content]').forEach(el => {
+        const key = el.getAttribute('data-content');
+        const value = key.split('.').reduce((obj, i) => obj ? obj[i] : null, data);
+        if (value) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.value = value;
+            } else {
+                el.innerHTML = value;
+            }
+        }
+      });
+
+      // Render Dynamic Lists
+      renderSkills(data.skills.categories);
+      renderResume(data.resume.education, 'education');
+      renderResume(data.resume.experience, 'experience');
+      renderServices(data.services.items);
+      renderPortfolio(data.portfolio);
+      renderTestimonials(data.testimonials.items);
+
+      // Update Stats Targets
+      if (data.stats && data.stats.items) {
+          const statsCounters = document.querySelectorAll('.counter');
+          data.stats.items.forEach((item, idx) => {
+              if (statsCounters[idx]) statsCounters[idx].setAttribute('data-target', item.target);
+          });
+      }
+
+      // Update Typed Items
+      if (data.hero && data.hero.typedItems) {
+        initTyped(data.hero.typedItems);
+      }
+
+      updateExperienceYears();
+      
+      // Re-initialize AOS
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+
+      // Initialize Isotope after content is loaded
+      initPortfolioIsotope();
+      
+      // Initialize Lightbox
+      GLightbox({
+        selector: '.portfolio-lightbox'
+      });
+
+    } catch (error) {
+      console.error('Error loading content:', error);
+    }
+  }
+
+  function renderSkills(categories) {
+    const container = document.querySelector('[data-list="skills.categories"]');
+    if (!container || !categories) return;
+    
+    container.innerHTML = categories.map((cat, idx) => `
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${idx * 100}">
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon ${cat.name.toLowerCase().includes('backend') ? 'backend' : cat.name.toLowerCase().includes('frontend') ? 'frontend' : 'devops'}">
+              <i class="bi ${cat.name.toLowerCase().includes('backend') ? 'bi-server' : cat.name.toLowerCase().includes('frontend') ? 'bi-palette' : 'bi-gear'}"></i>
+            </div>
+            <h3>${cat.name}</h3>
+          </div>
+          <div class="skill-card-body">
+            ${cat.items.map(skill => `
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>${skill.name}</span>
+                </div>
+                <div class="skill-level">
+                  <div class="skill-progress" style="--progress: ${skill.level}"></div>
+                </div>
+                <span class="skill-percent">${skill.level}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderResume(items, type) {
+    const container = document.querySelector(`[data-list="resume.${type}"]`);
+    if (!container || !items) return;
+
+    container.innerHTML = items.map(item => `
+      <div class="resume-item">
+        <h4>${item.degree || item.title}</h4>
+        <h5>${item.year || item.period}</h5>
+        <p><em>${item.school || item.company}</em></p>
+        ${item.desc ? `<p>${item.desc}</p>` : ''}
+        ${item.tasks ? `
+          <ul>
+            ${item.tasks.map(task => `<li>${task}</li>`).join('')}
+          </ul>
+        ` : ''}
+      </div>
+    `).join('');
+  }
+
+  function renderServices(items) {
+    const container = document.querySelector('[data-list="services.items"]');
+    if (!container || !items) return;
+
+    const icons = ['bi-laptop', 'bi-phone', 'bi-code-square', 'bi-cart3', 'bi-gear', 'bi-graph-up'];
+
+    container.innerHTML = items.map((item, idx) => `
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="${idx * 100}">
+        <div class="icon-box h-100">
+          <div class="icon">
+            <i class="bi ${icons[idx] || 'bi-briefcase'}"></i>
+            <div class="icon-bg"></div>
+          </div>
+          <h4 class="title">${item.title}</h4>
+          <div class="description">
+            <ul>
+              ${item.features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderPortfolio(portfolio) {
+    const filterContainer = document.querySelector('[data-list="portfolio.filters"]');
+    const itemsContainer = document.querySelector('[data-list="portfolio.items"]');
+    
+    if (filterContainer && portfolio.filters) {
+      filterContainer.innerHTML = portfolio.filters.map(f => `
+        <li data-filter="${f.id}" class="${f.id === '*' ? 'filter-active' : ''}">${f.label}</li>
+      `).join('');
+    }
+
+    if (itemsContainer && portfolio.items) {
+      itemsContainer.innerHTML = portfolio.items.map(item => `
+        <div class="col-lg-4 col-md-6 portfolio-item ${item.category}">
+          <div class="portfolio-wrap">
+            <img src="${item.img}" class="img-fluid" alt="${item.title}">
+            <div class="portfolio-links">
+              <a href="${item.img}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${item.title}"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="Plus de détails"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  function renderTestimonials(items) {
+    const container = document.querySelector('[data-list="testimonials.items"]');
+    if (!container || !items) return;
+
+    container.innerHTML = items.map((item, idx) => `
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="${idx * 100}">
+        <div class="testimonial-item">
+          <div class="testimonial-rating">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="testimonial-content">"${item.text}"</div>
+          <div class="testimonial-author">
+            <img src="${item.img}" class="author-img" alt="${item.author}">
+            <div class="author-info">
+              <h4>${item.author}</h4>
+              <span>${item.role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function initPortfolioIsotope() {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+  }
+
+  loadContent();
+
+})()

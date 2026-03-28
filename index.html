@@ -142,15 +142,15 @@
 				</a>
 				<img src="assets/img/junior.png"
 					alt="Junior Brindou - Développeur Full Stack" class="img-fluid profile-photo">
-				<h1><a href="index.html">Junior Brindou</a></h1>
-				<p class="tagline">Développeur .NET / Angular</p>
+				<h1><a href="index.html" data-content="header.name">Junior Brindou</a></h1>
+				<p class="tagline" data-content="header.tagline">Développeur .NET / Angular</p>
 				<div class="social-links">
 					<a href="https://github.com/juniorbrindou" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
 					<a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
 					<a href="https://twitter.com/juniorbrindou" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
 					<a href="mailto:225juniorbrindou@gmail.com" title="Email"><i class="bx bx-envelope"></i></a>
 				</div>
-				<span class="status-badge">Disponible</span>
+				<span class="status-badge" data-content="header.status">Disponible</span>
 			</div>
 
 			<nav id="navbar" class="nav-menu">
@@ -177,10 +177,10 @@
 	<!-- ======= Hero Section ======= -->
 	<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
 		<div class="hero-container" data-aos="fade-in">
-			<p class="hero-subtitle">👋 Bonjour, je suis</p>
-			<h1>Junior <span class="gradient-text">Brindou</span></h1>
-			<p>Je suis <span class="typed" data-typed-items="Développeur Full Stack, Expert PHP/Laravel, Passionné Angular, Créateur de Solutions"></span></p>
-			
+			<p class="hero-subtitle" data-content="hero.subtitle">👋 Bonjour, je suis</p>
+			<h1>Junior Brindou</h1>
+			<p><span class="typed" data-typed-items="Développeur Full Stack, Expert en PHP/Laravel, Passionné du framework Angular pour les créations d'infaces utilisateurs modernes et robustes, Créateur de Solutions innovantes"></span></p>
+
 			<!-- Terminal Effect -->
 			<div class="hero-terminal">
 				<div class="terminal-header">
@@ -191,13 +191,13 @@
 				<div class="terminal-line">
 					<span class="prompt">$</span> <span class="command">whoami</span>
 				</div>
-				<div class="terminal-line">
+				<div class="terminal-line" data-content="hero.terminal.whoami">
 					Full Stack Developer @ Innova7th
 				</div>
 				<div class="terminal-line">
 					<span class="prompt">$</span> <span class="command">cat skills.txt</span>
 				</div>
-				<div class="terminal-line">
+				<div class="terminal-line" data-content="hero.terminal.skills">
 					ASP.NET Core • C# • Angular • Laravel • Flutter • SQL Server
 				</div>
 			</div>
@@ -219,8 +219,8 @@
 		<section id="about" class="about">
 			<div class="container">
 				<div class="section-title">
-					<h2>Me Concernant</h2>
-					<p class="lead">
+					<h2 data-content="about.title">Me Concernant</h2>
+					<p class="lead" data-content="about.lead">
 						Développeur Full Stack passionné avec plus de <span id="experienceYears">4</span> ans d'expérience dans la création d'applications web et mobiles innovantes.
 					</p>
 				</div>
@@ -238,7 +238,7 @@
 					</div>
 
 					<div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-						<h3>Développeur .NET / Angular &amp; Freelance</h3>
+						<h3 data-content="about.subtitle">Développeur .NET / Angular &amp; Freelance</h3>
 						
 						<div class="row content-info">
 							<div class="col-lg-6">
@@ -246,22 +246,22 @@
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Expertise :</strong>
-										<span>Web & Mobile</span>
+										<span data-content="about.info.expertise">Web & Mobile</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Site Web :</strong>
-										<span>juniorbrindou.github.io</span>
+										<span data-content="about.info.website">juniorbrindou.github.io</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Téléphone :</strong>
-										<span>+225 07 79 84 37 57</span>
+										<span data-content="about.info.phone">+225 07 79 84 37 57</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Localisation :</strong>
-										<span>Abidjan, Côte d'Ivoire</span>
+										<span data-content="about.info.city">Abidjan, Côte d'Ivoire</span>
 									</li>
 								</ul>
 							</div>
@@ -270,22 +270,22 @@
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Expérience :</strong>
-										<span>4+ années</span>
+										<span data-content="about.info.experience">4+ années</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Diplôme :</strong>
-										<span>Licence Pro Génie Logiciel</span>
+										<span data-content="about.info.degree">Licence Pro Génie Logiciel</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Email :</strong>
-										<span>juniorbrindou225@outlook.fr</span>
+										<span data-content="about.info.email">juniorbrindou225@outlook.fr</span>
 									</li>
 									<li>
 										<i class="bi bi-chevron-right"></i>
 										<strong>Freelance :</strong>
-										<span>Disponible</span>
+										<span data-content="about.info.freelance">Disponible</span>
 									</li>
 								</ul>
 							</div>
@@ -294,11 +294,11 @@
 						<div class="skills-section">
 							<h4>Technologies principales</h4>
 							<div class="tech-stack">
-								<div class="tech-item" title="ASP.NET Core">
+								<div class="tech-item" title="ASP.NET">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="30" height="30">
 										<path fill="#68217A" d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6zM64 88.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.6C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5z"/>
 									</svg>
-									<span>ASP.NET Core</span>
+									<span>ASP.NET</span>
 								</div>
 								<div class="tech-item" title="Angular">
 									<img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular">
@@ -315,11 +315,11 @@
 							</div>
 						</div>
 
-						<p class="mt-4">
+						<p class="mt-4" data-content="about.description.0">
 							Développeur Full Stack spécialisé en ASP.NET Core et Angular avec plus de 4 ans d'expérience dans le développement d'applications web et mobiles.
 							Mon expertise s'étend de la conception d'API REST robustes à la création d'interfaces utilisateur modernes et réactives.
 						</p>
-						<p>
+						<p data-content="about.description.1">
 							Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique,
 							en mettant l'accent sur l'automatisation CI/CD, la sécurité et les architectures cloud (AWS, Docker).
 						</p>
@@ -332,12 +332,14 @@
 		<section id="skills" class="skills section-bg">
 			<div class="container">
 				<div class="section-title">
-					<h2>Compétences</h2>
-					<p>Fort de mon expérience en développement d'applications d'entreprise, je maîtrise un large éventail de technologies modernes.</p>
+					<h2 data-content="skills.title">Compétences</h2>
+					<p data-content="skills.description">Fort de mon expérience en développement d'applications d'entreprise, je maîtrise un large éventail de technologies modernes.</p>
 				</div>
 
 				<!-- Skills Categories -->
-				<div class="row g-4">
+				<div class="row g-4" data-list="skills.categories">
+					<!-- Dynamically populated from content.json -->
+				</div>
 					<!-- Backend -->
 					<div class="col-lg-4 col-md-6" data-aos="fade-up">
 						<div class="skill-card">
@@ -507,40 +509,40 @@
 		<section id="stats" class="stats" aria-labelledby="stats-heading">
 			<div class="container">
 				<div class="section-title">
-					<h2 id="stats-heading">Statistiques</h2>
-					<p>Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.</p>
+					<h2 id="stats-heading" data-content="stats.title">Statistiques</h2>
+					<p data-content="stats.description">Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.</p>
 				</div>
 
 				<div class="row">
 					<div class="col-lg-3 col-md-6" data-aos="fade-up">
 						<div class="stats-item" role="article" aria-labelledby="stat-experience">
 							<span class="counter" data-target="4" aria-live="polite">0</span>
-							<div class="counter-label" id="stat-experience">Années d'expérience</div>
-							<div class="counter-description">En développement Full Stack</div>
+							<div class="counter-label" id="stat-experience" data-content="stats.items.0.label">Années d'expérience</div>
+							<div class="counter-description" data-content="stats.items.0.desc">En développement Full Stack</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
 						<div class="stats-item" role="article" aria-labelledby="stat-projects">
 							<span class="counter" data-target="50" aria-live="polite">0</span>
-							<div class="counter-label" id="stat-projects">Projets réalisés</div>
-							<div class="counter-description">Applications web et mobiles</div>
+							<div class="counter-label" id="stat-projects" data-content="stats.items.1.label">Projets réalisés</div>
+							<div class="counter-description" data-content="stats.items.1.desc">Applications web et mobiles</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
 						<div class="stats-item" role="article" aria-labelledby="stat-clients">
 							<span class="counter" data-target="25" aria-live="polite">0</span>
-							<div class="counter-label" id="stat-clients">Clients satisfaits</div>
-							<div class="counter-description">Entreprises et startups</div>
+							<div class="counter-label" id="stat-clients" data-content="stats.items.2.label">Clients satisfaits</div>
+							<div class="counter-description" data-content="stats.items.2.desc">Entreprises et startups</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
 						<div class="stats-item" role="article" aria-labelledby="stat-hours">
 							<span class="counter" data-target="1000" aria-live="polite">0</span>
-							<div class="counter-label" id="stat-hours">Heures de code</div>
-							<div class="counter-description">Cette année</div>
+							<div class="counter-label" id="stat-hours" data-content="stats.items.3.label">Heures de code</div>
+							<div class="counter-description" data-content="stats.items.3.desc">Cette année</div>
 						</div>
 					</div>
 				</div>
@@ -551,8 +553,8 @@
 		<section id="resume" class="resume">
 			<div class="container">
 				<div class="section-title">
-					<h2>Curriculum Vitae</h2>
-					<p>Développeur Full Stack passionné avec une solide expérience dans la création d'applications web et mobiles modernes.</p>
+					<h2 data-content="resume.title">Curriculum Vitae</h2>
+					<p data-content="resume.description">Développeur Full Stack passionné avec une solide expérience dans la création d'applications web et mobiles modernes.</p>
 				</div>
 
 				<div class="row">
@@ -569,51 +571,15 @@
 						</div>
 
 						<h3 class="resume-title">Formation</h3>
-						<div class="resume-item">
-							<h4>Licence Professionnelle en Génie Logiciel</h4>
-							<h5>2022</h5>
-							<p><em>EDHEC - École des Hautes Études Commerciales, Abidjan</em></p>
-							<p>Spécialisation en développement d'applications et génie logiciel.</p>
-						</div>
-						<div class="resume-item">
-							<h4>BTS Informatique Développeur d'Application</h4>
-							<h5>2018</h5>
-							<p><em>AGITEL Formation, Abidjan</em></p>
-							<p>Formation en développement logiciel et programmation.</p>
-						</div>
-						<div class="resume-item">
-							<h4>Baccalauréat Série C</h4>
-							<h5>2016</h5>
-							<p><em>Collège Le Classique, Abidjan</em></p>
-							<p>Baccalauréat scientifique option mathématiques.</p>
+						<div data-list="resume.education">
+							<!-- Dynamically populated from content.json -->
 						</div>
 					</div>
 
 					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 						<h3 class="resume-title">Expérience Professionnelle</h3>
-						<div class="resume-item">
-							<h4>Développeur Full Stack .NET</h4>
-							<h5>Avril 2023 - Présent</h5>
-							<p><em>Innova7th (Freelance)</em></p>
-							<ul>
-								<li>Développement d'une application multi-tenant avec provisioning dynamique.</li>
-								<li>Conception de l'architecture backend avec RBAC (Role-Based Access Control).</li>
-								<li>Mise en place de l'isolation des données par tenant.</li>
-								<li>Automatisation des pipelines CI/CD pour le déploiement continu.</li>
-								<li>Technologies : ASP.NET Core 7, Docker, AWS, SQL Server</li>
-							</ul>
-						</div>
-						<div class="resume-item">
-							<h4>Développeur Web Full Stack</h4>
-							<h5>Décembre 2020 - Février 2023</h5>
-							<p><em>INGES-CI, Abidjan</em></p>
-							<ul>
-								<li>Développement de MailView, une application de gestion de courriers.</li>
-								<li>Conception de l'architecture API RESTful.</li>
-								<li>Développement front-end avec Angular 14.</li>
-								<li>Mise en place du déploiement CI/CD.</li>
-								<li>Technologies : ASP.NET, Angular 14, SQL Server</li>
-							</ul>
+						<div data-list="resume.experience">
+							<!-- Dynamically populated from content.json -->
 						</div>
 
 						<h3 class="resume-title">Projets Notables</h3>
@@ -644,123 +610,23 @@
 			<div class="container">
 
 				<div class="section-title">
-					<h2>Portfolio</h2>
-					<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+					<h2 data-content="portfolio.title">Portfolio</h2>
+					<p data-content="portfolio.description">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
 						sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
 						ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
 				</div>
 
 				<div class="row" data-aos="fade-up">
 					<div class="col-lg-12 d-flex justify-content-center">
-						<ul id="portfolio-flters">
-							<li data-filter="*" class="filter-active">All</li>
-							<li data-filter=".filter-app">App</li>
-							<li data-filter=".filter-card">Card</li>
-							<li data-filter=".filter-web">Web</li>
+						<ul id="portfolio-flters" data-list="portfolio.filters">
+							<!-- Dynamically populated -->
 						</ul>
 					</div>
 				</div>
 
-				<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-1.png" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Souralè Groupe"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="En savoir plus"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-3.png" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-3.png" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-4.png" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-4.png" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-6.png" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-6.png" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-7.png" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-7.png" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-wrap">
-							<img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-							<div class="portfolio-links">
-								<a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-									class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
+				<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100" data-list="portfolio.items">
+					<!-- Dynamically populated from content.json -->
+				</div>
 
 				</div>
 
@@ -862,114 +728,8 @@
 					<p>En tant que développeur web/mobile expérimenté, je propose une gamme complète de services numériques adaptés à vos besoins.</p>
 				</div>
 
-				<div class="row g-4">
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-laptop"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">Développement Web Responsive</h4>
-							<div class="description">
-								<ul>
-									<li>Sites web modernes et adaptatifs</li>
-									<li>Compatibilité multi-plateformes</li>
-									<li>Optimisation mobile-first</li>
-									<li>Performance et accessibilité</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-phone"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">Applications Mobiles</h4>
-							<div class="description">
-								<ul>
-									<li>Applications iOS et Android</li>
-									<li>Solutions cross-platform</li>
-									<li>Applications PWA</li>
-									<li>Intégration API natives</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-code-square"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">Architecture & API</h4>
-							<div class="description">
-								<ul>
-									<li>Conception d'API RESTful</li>
-									<li>Architecture microservices</li>
-									<li>Intégration de systèmes</li>
-									<li>Documentation technique</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-cart3"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">E-commerce</h4>
-							<div class="description">
-								<ul>
-									<li>Solutions e-commerce sur mesure</li>
-									<li>Intégration de paiement</li>
-									<li>Gestion des stocks</li>
-									<li>Optimisation des conversions</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-gear"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">Maintenance & Support</h4>
-							<div class="description">
-								<ul>
-									<li>Maintenance préventive</li>
-									<li>Monitoring des performances</li>
-									<li>Mises à jour de sécurité</li>
-									<li>Support technique réactif</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-						<div class="icon-box h-100">
-							<div class="icon">
-								<i class="bi bi-graph-up"></i>
-								<div class="icon-bg"></div>
-							</div>
-							<h4 class="title">Optimisation & SEO</h4>
-							<div class="description">
-								<ul>
-									<li>Optimisation des performances</li>
-									<li>Référencement naturel</li>
-									<li>Analytics et rapports</li>
-									<li>Conseils stratégiques</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+				<div class="row g-4" data-list="services.items">
+					<!-- Dynamically populated from content.json -->
 				</div>
 			</div>
 		</section><!-- End Services Section -->
@@ -983,94 +743,8 @@
 					<p>Découvrez ce que mes clients disent de notre collaboration et de la qualité des solutions développées ensemble.</p>
 				</div>
 
-				<div class="row">
-					<div class="col-lg-6" data-aos="fade-up">
-						<div class="testimonial-item">
-							<div class="testimonial-rating">
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-							</div>
-							<div class="testimonial-content">
-								"Junior a développé notre plateforme e-commerce avec une expertise remarquable. Sa maîtrise d'Angular et Laravel nous a permis d'avoir une solution robuste et moderne. Je recommande vivement ses services."
-							</div>
-							<div class="testimonial-author">
-								<img src="assets/img/testimonials/testimonials-1.jpg" class="author-img" alt="Client testimonial">
-								<div class="author-info">
-									<h4>Marie Kouassi</h4>
-									<span>CEO, TechCorp CI</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-						<div class="testimonial-item">
-							<div class="testimonial-rating">
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-							</div>
-							<div class="testimonial-content">
-								"Collaboration exceptionnelle avec Junior sur notre application mobile. Son approche professionnelle et sa capacité à comprendre nos besoins métier ont fait la différence. Livraison dans les délais respectés."
-							</div>
-							<div class="testimonial-author">
-								<img src="assets/img/testimonials/testimonials-2.jpg" class="author-img" alt="Client testimonial">
-								<div class="author-info">
-									<h4>Koffi Adjoua</h4>
-									<span>Directeur Technique, InnovaTech</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-						<div class="testimonial-item">
-							<div class="testimonial-rating">
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-							</div>
-							<div class="testimonial-content">
-								"Junior a transformé notre vision en réalité avec une application web performante. Son expertise technique et sa créativité ont dépassé nos attentes. Un développeur de talent !"
-							</div>
-							<div class="testimonial-author">
-								<img src="assets/img/testimonials/testimonials-3.jpg" class="author-img" alt="Client testimonial">
-								<div class="author-info">
-									<h4>Ahmed Traoré</h4>
-									<span>Fondateur, StartupLab</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-						<div class="testimonial-item">
-							<div class="testimonial-rating">
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-								<i class="bi bi-star-fill"></i>
-							</div>
-							<div class="testimonial-content">
-								"Grâce à Junior, nous avons modernisé notre système d'information. Sa connaissance approfondie des technologies PHP et son professionnalisme sont remarquables. Excellent travail !"
-							</div>
-							<div class="testimonial-author">
-								<img src="assets/img/testimonials/testimonials-4.jpg" class="author-img" alt="Client testimonial">
-								<div class="author-info">
-									<h4>Fatou Diabaté</h4>
-									<span>CTO, FinanceDigital</span>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="row" data-list="testimonials.items">
+					<!-- Dynamically populated from content.json -->
 				</div>
 
 			</div>
@@ -1082,7 +756,7 @@
 			<div class="container">
 
 				<div class="section-title">
-					<h2>Contact</h2>
+					<h2 data-content="contact.title">Contact</h2>
 					<p>Si vous avez besoin d'un développeur compétent et passionné, n'hésitez pas à me
 						contacter. Nous pourrons discuter de vos besoins en sites ou applications web ou mobile,
 						en plateformes e-commerce, en API et de la meilleure façon de les mettre en œuvre
@@ -1099,7 +773,7 @@
 								<i class="bi bi-geo-alt"></i>
 								<div>
 									<h4>Adresse</h4>
-									<p>Abidjan, Côte d'Ivoire</p>
+									<p data-content="contact.info.address">Abidjan, Côte d'Ivoire</p>
 								</div>
 							</div>
 
@@ -1107,7 +781,7 @@
 								<i class="bi bi-envelope"></i>
 								<div>
 									<h4>Email</h4>
-									<p>juniorbrindou225@outlook.fr</p>
+									<p data-content="contact.info.email">juniorbrindou225@outlook.fr</p>
 								</div>
 							</div>
 
@@ -1115,7 +789,7 @@
 								<i class="bi bi-phone"></i>
 								<div>
 									<h4>Téléphone</h4>
-									<p>+225 07 79 84 37 57</p>
+									<p data-content="contact.info.phone">+225 07 79 84 37 57</p>
 								</div>
 							</div>
 						</div>
