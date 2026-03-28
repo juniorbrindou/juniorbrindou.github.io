@@ -276,21 +276,7 @@
     }
   });
 
-  /**
-   * Calculate years of experience
-   */
-  function updateExperienceYears() {
-    const startYear = 2021;
-    const currentYear = new Date().getFullYear();
-    const years = currentYear - startYear;
-    const experienceElement = document.getElementById('experienceYears');
-    if (experienceElement) {
-      experienceElement.textContent = years;
-    }
-  }
 
-  // Update experience years when page loads
-  window.addEventListener('load', updateExperienceYears);
 
   /**
    * Animated Counters
@@ -390,6 +376,12 @@
         if (meta) meta.setAttribute('content', value);
       }
 
+      // Calculate experience years
+      const startDate = new Date(data.config.careerStartDate || "2020-03-01");
+      const diffMs = Date.now() - startDate.getTime();
+      const ageDate = new Date(diffMs);
+      const expYears = Math.abs(ageDate.getUTCFullYear() - 1970);
+
       // Simple Text Elements (data-content)
       const currentYear = new Date().getFullYear();
       document.querySelectorAll('[data-content]').forEach(el => {
@@ -398,7 +390,8 @@
         if (value) {
             let processedValue = value;
             if (typeof value === 'string') {
-              processedValue = value.replace('{year}', currentYear);
+              processedValue = value.replace(new RegExp('{year}', 'g'), currentYear)
+                                    .replace(new RegExp('{exp}', 'g'), expYears);
             }
 
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -420,7 +413,11 @@
       if (data.stats && data.stats.items) {
           const statsCounters = document.querySelectorAll('.counter');
           data.stats.items.forEach((item, idx) => {
-              if (statsCounters[idx]) statsCounters[idx].setAttribute('data-target', item.target);
+              if (statsCounters[idx]) {
+                let target = item.target;
+                if (target === "{exp}") target = expYears;
+                statsCounters[idx].setAttribute('data-target', target);
+              }
           });
       }
 
@@ -428,8 +425,6 @@
       if (data.hero && data.hero.typedItems) {
         initTyped(data.hero.typedItems);
       }
-
-      updateExperienceYears();
       
       // Re-initialize AOS
       AOS.init({

@@ -2265,8 +2265,101 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Utility Classes & Animations
+# Top Contact Bar
 --------------------------------------------------------------*/
+.top-contact {
+  background: var(--bg-secondary);
+  min-height: 45px;
+  font-size: 13.5px;
+  transition: all 0.3s;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 996;
+}
+
+@media (min-width: 1200px) {
+  .top-contact {
+    margin-left: 280px;
+  }
+}
+
+.top-contact .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-contact .contact-info a,
+.top-contact .contact-info span {
+  color: var(--text-secondary);
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.top-contact .contact-info a:hover {
+  color: var(--primary-color);
+}
+
+.top-contact .contact-info i {
+  color: var(--primary-color);
+  line-height: 0;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.top-contact .info-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.top-contact .top-social a {
+  color: var(--text-muted);
+  line-height: 0;
+  margin-left: 20px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.top-contact .top-social a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1199px) {
+  .top-contact {
+    position: relative;
+    margin-left: 0;
+    padding: 10px 0;
+  }
+  
+  .top-contact .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .top-contact .contact-info {
+      gap: 15px;
+  }
+  
+  .top-contact .info-item.ms-4 {
+      margin-left: 0 !important;
+  }
+}
+
+#contact .php-email-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    #contact .php-email-form {
+        padding: 25px;
+    }
+}
 /* Fade animations */
 .fade-in {
   animation: fadeIn 0.5s ease forwards;

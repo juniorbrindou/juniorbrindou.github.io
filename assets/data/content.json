@@ -1,7 +1,10 @@
 {
+  "config": {
+    "careerStartDate": "2020-03-01"
+  },
   "meta": {
     "title": "Junior Brindou - Développeur .NET / Angular | Portfolio",
-    "description": "Développeur Full Stack spécialisé en ASP.NET et Angular. +4 ans d'expérience.",
+    "description": "Développeur Full Stack spécialisé en ASP.NET et Angular. {exp}+ ans d'expérience.",
     "keywords": "Junior Brindou, développeur full stack, ASP.NET, C#, Angular, Flutter, Abidjan"
   },
   "header": {
@@ -34,20 +37,20 @@
   },
   "about": {
     "title": "Me Concernant",
-    "lead": "Développeur Full Stack passionné avec plus de 4 ans d'expérience dans la création d'applications web et mobiles innovantes.",
+    "lead": "Développeur Full Stack passionné avec plus de {exp} ans d'expérience dans la création d'applications web et mobiles innovantes.",
     "subtitle": "Développeur .NET / Angular & Freelance",
     "info": {
       "expertise": "Web & Mobile",
       "website": "juniorbrindou.github.io",
       "phone": "+225 07 79 84 37 57",
       "city": "Abidjan, Côte d'Ivoire",
-      "experience": "4+ années",
+      "experience": "{exp}+ années",
       "degree": "Licence Pro Génie Logiciel",
       "email": "juniorbrindou225@outlook.fr",
       "freelance": "Disponible"
     },
     "description": [
-      "Développeur Full Stack spécialisé en ASP.NET et Angular avec plus de 4 ans d'expérience dans le développement d'applications web et mobiles.",
+      "Développeur Full Stack spécialisé en ASP.NET et Angular avec plus de {exp} ans d'expérience dans le développement d'applications web et mobiles.",
       "Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique, en mettant l'accent sur l'automatisation CI/CD, la sécurité et les architectures cloud (AWS, Docker)."
     ]
   },
@@ -88,7 +91,7 @@
     "title": "Statistiques",
     "description": "Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.",
     "items": [
-      { "label": "Années d'expérience", "target": 4, "desc": "En développement Full Stack" },
+      { "label": "Années d'expérience", "target": "{exp}", "desc": "En développement Full Stack" },
       { "label": "Projets réalisés", "target": 50, "desc": "Applications web et mobiles" },
       { "label": "Clients satisfaits", "target": 25, "desc": "Entreprises et startups" },
       { "label": "Heures de code", "target": 1000, "desc": "Cette année" }
