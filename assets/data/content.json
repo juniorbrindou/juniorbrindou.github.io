@@ -202,36 +202,7 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "Témoignages",
-    "description": "Découvrez ce que mes clients disent de notre collaboration.",
-    "items": [
-      {
-        "text": "Junior a développé notre plateforme e-commerce avec une expertise remarquable. Sa maîtrise d'Angular et Laravel nous a permis d'avoir une solution robuste et moderne.",
-        "author": "Marie Kouassi",
-        "role": "CEO, TechCorp CI",
-        "img": "assets/img/testimonials/testimonials-1.jpg"
-      },
-      {
-        "text": "Collaboration exceptionnelle avec Junior sur notre application mobile. Son approche professionnelle et sa capacité à comprendre nos besoins métier ont fait la différence.",
-        "author": "Koffi Adjoua",
-        "role": "Directeur Technique, InnovaTech",
-        "img": "assets/img/testimonials/testimonials-2.jpg"
-      },
-      {
-        "text": "Junior a transformé notre vision en réalité avec une application web performante. Son expertise technique et sa créativité ont dépassé nos attentes.",
-        "author": "Ahmed Traoré",
-        "role": "Fondateur, StartupLab",
-        "img": "assets/img/testimonials/testimonials-3.jpg"
-      },
-      {
-        "text": "Grâce à Junior, nous avons modernisé notre système d'information. Sa connaissance approfondie des technos PHP et son professionnalisme sont remarquables.",
-        "author": "Fatou Diabaté",
-        "role": "CTO, FinanceDigital",
-        "img": "assets/img/testimonials/testimonials-4.jpg"
-      }
-    ]
-  },
+
   "contact": {
     "title": "Contact",
     "description": "Si vous avez besoin d'un développeur compétent et passionné, n'hésitez pas à me contacter.",

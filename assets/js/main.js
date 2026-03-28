@@ -409,7 +409,6 @@
       renderResume(data.resume.experience, 'experience');
       renderServices(data.services.items);
       renderPortfolio(data.portfolio);
-      renderTestimonials(data.testimonials.items);
 
       // Update Stats Targets
       if (data.stats && data.stats.items) {
@@ -546,28 +545,7 @@
     }
   }
 
-  function renderTestimonials(items) {
-    const container = document.querySelector('[data-list="testimonials.items"]');
-    if (!container || !items) return;
 
-    container.innerHTML = items.map((item, idx) => `
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="${idx * 100}">
-        <div class="testimonial-item">
-          <div class="testimonial-rating">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-          </div>
-          <div class="testimonial-content">"${item.text}"</div>
-          <div class="testimonial-author">
-            <img src="${item.img}" class="author-img" alt="${item.author}">
-            <div class="author-info">
-              <h4>${item.author}</h4>
-              <span>${item.role}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  }
 
   function initPortfolioIsotope() {
     let portfolioContainer = select('.portfolio-container');
