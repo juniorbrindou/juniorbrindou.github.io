@@ -78,23 +78,27 @@
     onscroll(document, toggleBacktotop)
   }
 
-  on('click', '.mobile-nav-toggle', function(e) {
+  document.addEventListener('click', function(e) {
+    const toggle = e.target.closest('.mobile-nav-toggle');
+    if (!toggle) return;
     const mobileNav = document.getElementById('mobile-nav');
     if (mobileNav) mobileNav.classList.toggle('active');
-    this.classList.toggle('bi-list');
-    this.classList.toggle('bi-x');
-  })
+    toggle.classList.toggle('bi-list');
+    toggle.classList.toggle('bi-x');
+  });
 
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-      const mobileNav = document.getElementById('mobile-nav');
-      if (mobileNav) mobileNav.classList.remove('active');
-      const toggle = select('.mobile-nav-toggle');
-      if (toggle) { toggle.classList.add('bi-list'); toggle.classList.remove('bi-x'); }
-      scrollto(this.hash)
-    }
-  }, true)
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('.scrollto');
+    if (!link) return;
+    const target = select(link.hash);
+    if (!target) return;
+    e.preventDefault();
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.classList.remove('active');
+    const toggle = select('.mobile-nav-toggle');
+    if (toggle) { toggle.classList.add('bi-list'); toggle.classList.remove('bi-x'); }
+    scrollto(link.hash);
+  });
 
   window.addEventListener('load', () => {
     if (window.location.hash) {
