@@ -79,22 +79,19 @@
   }
 
   on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) mobileNav.classList.toggle('active');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
   })
 
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
+      const mobileNav = document.getElementById('mobile-nav');
+      if (mobileNav) mobileNav.classList.remove('active');
+      const toggle = select('.mobile-nav-toggle');
+      if (toggle) { toggle.classList.add('bi-list'); toggle.classList.remove('bi-x'); }
       scrollto(this.hash)
     }
   }, true)
@@ -115,7 +112,8 @@
         loop: true,
         typeSpeed: 100,
         backSpeed: 50,
-        backDelay: 2000
+        backDelay: 2000,
+        showCursor: false
       });
     }
   }
@@ -157,142 +155,53 @@
     if (!navWrapper) return;
 
     const nav = data.header.nav;
-    const info = data.contact.info;
     const isDetails = currentPage.includes('portfolio-details.html');
     const pathPrefix = isDetails ? 'index.html' : '';
 
     navWrapper.innerHTML = `
-      <!-- ======= Top Contact Bar ======= -->
-      <div id="top-contact" class="top-contact d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between flex-nowrap">
-          <div class="contact-info d-flex align-items-center">
-            <div class="info-item">
-              <i class="bi bi-envelope"></i>
-              <a href="mailto:${info.email}">${info.email}</a>
-            </div>
-            <div class="info-item ms-4 d-none d-sm-flex">
-              <i class="bi bi-phone"></i>
-              <span>${info.phone}</span>
-            </div>
-            <div class="info-item ms-4 d-none d-md-flex">
-              <i class="bi bi-geo-alt"></i>
-              <span>${info.address}</span>
-            </div>
-          </div>
-          <div class="top-social d-none d-md-flex align-items-center">
-            <a href="https://github.com/juniorbrindou" target="_blank"><i class="bx bxl-github"></i></a>
-            <a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          </div>
+      <nav id="nav">
+        <a href="${pathPrefix}#hero" class="nav-logo scrollto">JB<em>&lt;/&gt;</em></a>
+        <ul id="navbar" class="nav-links">
+          <li><a href="${pathPrefix}#hero" class="scrollto ${isDetails ? '' : 'active'}">${nav.home}</a></li>
+          <li><a href="${pathPrefix}#about" class="scrollto">${nav.about}</a></li>
+          <li><a href="${pathPrefix}#skills" class="scrollto">${nav.skills}</a></li>
+          <li><a href="${pathPrefix}#resume" class="scrollto">${nav.resume}</a></li>
+          <li><a href="${pathPrefix}#portfolio" class="scrollto ${isDetails ? 'active' : ''}">${nav.portfolio}</a></li>
+          <li><a href="${pathPrefix}#services" class="scrollto">${nav.services}</a></li>
+          <li><a href="${pathPrefix}#contact" class="scrollto">${nav.contact}</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="${pathPrefix}#contact" class="nav-cta scrollto">Hire Me</a>
+          <button class="mobile-nav-toggle bi bi-list" aria-label="Menu"></button>
         </div>
+      </nav>
+      <div id="mobile-nav" class="mobile-nav">
+        <ul>
+          <li><a href="${pathPrefix}#hero" class="scrollto">${nav.home}</a></li>
+          <li><a href="${pathPrefix}#about" class="scrollto">${nav.about}</a></li>
+          <li><a href="${pathPrefix}#skills" class="scrollto">${nav.skills}</a></li>
+          <li><a href="${pathPrefix}#resume" class="scrollto">${nav.resume}</a></li>
+          <li><a href="${pathPrefix}#portfolio" class="scrollto">${nav.portfolio}</a></li>
+          <li><a href="${pathPrefix}#services" class="scrollto">${nav.services}</a></li>
+          <li><a href="${pathPrefix}#contact" class="scrollto">${nav.contact}</a></li>
+        </ul>
       </div>
-
-      <!-- ======= Mobile nav toggle button ======= -->
-      <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-      <!-- ======= Theme Toggle Button ======= -->
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
-        <i class="bi ${localStorage.getItem('theme') === 'dark' ? 'bi-sun-fill' : 'bi-moon-fill'}" id="theme-icon"></i>
-      </button>
-
-      <!-- ======= Header ======= -->
-      <header id="header">
-        <div class="d-flex flex-column h-100">
-          <div class="profile">
-            <a href="${pathPrefix}#hero" class="profile-logo">
-              <img src="assets/img/logo-jb-new.png" alt="JB Logo" class="logo-img">
-            </a>
-            <img src="assets/img/junior.png" alt="${data.header.name}" class="img-fluid profile-photo">
-            <h1 class=""><a href="${pathPrefix}#hero">${data.header.name}</a></h1>
-            <p class="tagline">${data.header.tagline}</p>
-            <div class="social-links">
-              <a href="https://github.com/juniorbrindou" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
-              <a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://twitter.com/juniorbrindou" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="mailto:${info.email}" title="Email"><i class="bx bx-envelope"></i></a>
-            </div>
-            <span class="status-badge">${data.header.status}</span>
-          </div>
-
-          <nav id="navbar" class="nav-menu navbar">
-            <ul class="pb-4">
-              <li><a href="${pathPrefix}#hero" class="nav-link scrollto ${isDetails ? '' : 'active'}"><i class="bx bx-home"></i> <span>${nav.home}</span></a></li>
-              <li><a href="${pathPrefix}#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>${nav.about}</span></a></li>
-              <li><a href="${pathPrefix}#skills" class="nav-link scrollto"><i class="bx bx-list-check"></i> <span>${nav.skills}</span></a></li>
-              <li><a href="${pathPrefix}#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>${nav.resume}</span></a></li>
-              <li><a href="${pathPrefix}#portfolio" class="nav-link scrollto ${isDetails ? 'active' : ''}"><i class="bx bx-book-content"></i> <span>${nav.portfolio}</span></a></li>
-              <li><a href="${pathPrefix}#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>${nav.services}</span></a></li>
-              <li><a href="${pathPrefix}#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>${nav.contact}</span></a></li>
-            </ul>
-          </nav>
-          
-          <div class="sidebar-footer mt-auto py-3 px-4 border-top text-center">
-            <p class="mb-0 text-muted" style="font-size: 11px;">
-              &copy; ${new Date().getFullYear()} <strong>Junior Brindou</strong>.<br> Tous droits réservés.
-            </p>
-          </div>
-        </div>
-      </header>
     `;
 
     // Re-bind navbar links after injection
     navbarlinks = select('#navbar .scrollto', true);
-    
-    // Re-bind theme toggle click since it was replaced
-    const newToggle = select('#theme-toggle');
-    if (newToggle) {
-        newToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            const icon = select('#theme-icon');
-            if (icon) icon.className = newTheme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
-        });
-    }
-
-    // Re-bind mobile toggle
-    on('click', '.mobile-nav-toggle', function(e) {
-        select('body').classList.toggle('mobile-nav-active')
-        this.classList.toggle('bi-list')
-        this.classList.toggle('bi-x')
-    });
   }
-
-  // Updated Theme logic - move common parts to renderNavigation
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
 
   // --- Dynamic Loading Functions ---
 
   function renderSkills(categories) {
     const container = document.querySelector('[data-list="skills.categories"]');
     if (!container || !categories) return;
-    
-    container.innerHTML = categories.map((cat, idx) => `
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${idx * 100}">
-        <div class="skill-card">
-          <div class="skill-card-header">
-            <div class="skill-icon ${cat.name.toLowerCase().includes('backend') ? 'backend' : cat.name.toLowerCase().includes('frontend') ? 'frontend' : 'devops'}">
-              <i class="bi ${cat.name.toLowerCase().includes('backend') ? 'bi-server' : cat.name.toLowerCase().includes('frontend') ? 'bi-palette' : 'bi-gear'}"></i>
-            </div>
-            <h3>${cat.name}</h3>
-          </div>
-          <div class="skill-card-body">
-            ${cat.items.map(skill => {
-              const levelInt = parseInt(skill.level) || 0;
-              const levelClass = levelInt >= 90 ? 'expert' : levelInt >= 80 ? 'pro' : '';
-              return `
-              <div class="skill-tag ${levelClass}">
-                <i class="bi bi-patch-check-fill"></i>
-                <span>${skill.name}</span>
-                ${levelInt >= 90 ? '<span class="level-dot"></span>' : ''}
-              </div>
-              `;
-            }).join('')}
-          </div>
-        </div>
-      </div>
-    `).join('');
+    const allItems = categories.flatMap(cat => cat.items);
+    container.innerHTML = allItems.map(skill => {
+      const level = parseInt(skill.level) || 80;
+      return `<div class="tech-card" data-level="${level}"><span class="tc-name">${skill.name}</span><span class="tc-level">${skill.level}</span><div class="tc-bar"><div class="tc-bar-fill"></div></div></div>`;
+    }).join('');
   }
 
   function renderResume(items, type) {
