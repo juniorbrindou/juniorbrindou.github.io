@@ -433,27 +433,68 @@
         return;
     }
 
-    const setE = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    // Apply dynamic theme color
+    if (project.themeColor) {
+        document.documentElement.style.setProperty('--project-theme-color', project.themeColor);
+    } else {
+        document.documentElement.style.setProperty('--project-theme-color', 'var(--primary-color)');
+    }
+
+    const setE = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
     setE('project-full-title', project.title);
-    setE('project-breadcrumb-title', project.title);
-    setE('project-category', project.category.replace('filter-', '').toUpperCase());
+    
+    const catEl = document.getElementById('project-category');
+    if (catEl) catEl.textContent = (project.category || '').replace('filter-', '').toUpperCase();
+    
     setE('project-client', project.client || "---");
     setE('project-date', project.date || "---");
-    setE('project-description', project.description);
+    setE('project-description', project.fullDescription || project.description || "");
     
     const urlLink = document.getElementById('project-url');
     if (urlLink) {
-        urlLink.textContent = project.url && project.url !== '#' ? project.url.replace('https://', '') : "N/A";
+        urlLink.textContent = project.urlLabel || (project.url && project.url !== '#' ? project.url.replace('https://', '') : "N/A");
         urlLink.href = project.url || "#";
+    }
+
+    // Populate Tech Stack
+    const techStackContainer = document.getElementById('tech-stack-container');
+    const techStackList = document.getElementById('project-tech-stack');
+    if (techStackContainer && techStackList && project.techStack && project.techStack.length > 0) {
+        techStackContainer.style.display = 'block';
+        techStackList.innerHTML = project.techStack.map(tech => `
+            <li class="tech-item" data-aos="fade-up">
+                <i class="${tech.icon}"></i>
+                <span>${tech.name}</span>
+            </li>
+        `).join('');
+    }
+
+    // Populate Benefits
+    const benefitsSection = document.getElementById('benefits-section');
+    const benefitsList = document.getElementById('project-benefits');
+    if (benefitsSection && benefitsList && project.benefits && project.benefits.length > 0) {
+        benefitsSection.style.display = 'block';
+        benefitsList.innerHTML = project.benefits.map((benefit, index) => `
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="${index * 100}">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="${benefit.icon}"></i>
+                    </div>
+                    <h4>${benefit.title}</h4>
+                    <p>${benefit.description}</p>
+                </div>
+            </div>
+        `).join('');
     }
 
     const galleryContainer = document.getElementById('project-gallery-container');
     if (galleryContainer) {
         const images = project.gallery || [project.img];
         galleryContainer.innerHTML = images.map(img => `<div class="swiper-slide"><img src="${img}" alt="${project.title}"></div>`).join('');
-        new Swiper('.portfolio-details-slider', {
-          speed: 400, loop: true, autoplay: { delay: 5000, disableOnInteraction: false },
-          pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true }
+        new Swiper('.project-hero-slider', {
+          speed: 400, loop: true, autoplay: { delay: 4000, disableOnInteraction: false },
+          pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
         });
     }
   }

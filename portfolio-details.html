@@ -33,7 +33,7 @@
 
 <body>
 
-  <!-- ======= Page Loader ======= -->
+	<!-- ======= Page Loader ======= -->
 	<div id="page-loader" class="page-loader">
 		<div class="loader-terminal">
 			<div class="loader-terminal-header">
@@ -57,62 +57,88 @@
 	<!-- ======= Navigation Container (Reusable Component) ======= -->
 	<div id="nav-wrapper"></div>
 
+	<main id="main" class="project-details-page">
 
-	<main id="main">
-
-		<!-- ======= Breadcrumbs ======= -->
-		<section id="breadcrumbs" class="breadcrumbs">
-			<div class="container">
-
-				<div class="d-flex justify-content-between align-items-center">
-					<h2 id="project-breadcrumb-title">Détails du projet</h2>
-					<ol>
-						<li><a href="index.html">Accueil</a></li>
-						<li>Détails du projet</li>
-					</ol>
-				</div>
-
-			</div>
-		</section><!-- End Breadcrumbs -->
-
-		<!-- ======= Portfolio Details Section ======= -->
-		<section id="portfolio-details" class="portfolio-details">
-			<div class="container">
-
-				<div class="row gy-4">
-
-					<div class="col-lg-8">
-						<div class="portfolio-details-slider swiper">
-							<div class="swiper-wrapper align-items-center" id="project-gallery-container">
-								<!-- Dynamically populated -->
-                <div class="swiper-slide text-center">
-                  <div class="spinner-border text-primary" role="status"></div>
-                </div>
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
+		<!-- Hero Banner with Swiper -->
+		<section class="project-hero mt-0">
+			<div class="project-hero-slider swiper">
+				<div class="swiper-wrapper" id="project-gallery-container">
+					<!-- Dynamically populated -->
+					<div class="swiper-slide text-center d-flex align-items-center justify-content-center">
+						<div class="spinner-border text-light" role="status"></div>
 					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
 
-					<div class="col-lg-4">
-						<div class="portfolio-info" data-aos="fade-left">
-							<h3>Informations du Projet</h3>
-							<ul>
-								<li><strong>Catégorie</strong>: <span id="project-category">---</span></li>
-								<li><strong>Client</strong>: <span id="project-client">---</span></li>
-								<li><strong>Date du projet</strong>: <span id="project-date">---</span></li>
-								<li><strong>URL du projet</strong>: <a href="#" id="project-url" target="_blank">www.example.com</a></li>
+			<div class="project-hero-content text-center">
+				<div class="container" data-aos="fade-up">
+					<span class="category-badge" id="project-category">---</span>
+					<h1 id="project-full-title" class="display-4 fw-bold">Titre du projet</h1>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info Section -->
+		<section class="project-info-bar py-4 shadow-sm">
+			<div class="container">
+				<div class="row text-center gy-3" data-aos="fade-up" data-aos-delay="100">
+					<div class="col-md-4">
+						<i class="bx bx-buildings fs-1 project-accent-color"></i>
+						<h5 class="mt-2 text-muted">Client</h5>
+						<p id="project-client" class="fw-bold mb-0">---</p>
+					</div>
+					<div class="col-md-4">
+						<i class="bx bx-calendar fs-1 project-accent-color"></i>
+						<h5 class="mt-2 text-muted">Date</h5>
+						<p id="project-date" class="fw-bold mb-0">---</p>
+					</div>
+					<div class="col-md-4">
+						<i class="bx bx-link-external fs-1 project-accent-color"></i>
+						<h5 class="mt-2 text-muted">Lien</h5>
+						<p class="mb-0"><a href="#" id="project-url" target="_blank"
+								class="fw-bold text-decoration-none project-accent-color">---</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Description & Tech Stack -->
+		<section class="project-details-content py-5">
+			<div class="container">
+				<div class="row gy-5">
+					<div class="col-lg-8" data-aos="fade-right">
+						<h2 class="section-heading mb-4 border-bottom pb-2">Aperçu du projet</h2>
+						<p id="project-description" class="lead text-muted lh-lg">
+							Chargement en cours...
+						</p>
+					</div>
+					<div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+						<div class="tech-stack-card p-4 rounded-4 shadow-sm border" id="tech-stack-container"
+							style="display:none;">
+							<h3 class="h4 mb-4 project-accent-text"><i class="bx bx-code-alt me-2"></i>Technologies
+								Utilisées</h3>
+							<ul class="list-unstyled mb-0" id="project-tech-stack">
+								<!-- Injected via JS -->
 							</ul>
 						</div>
-						<div class="portfolio-description" data-aos="fade-up">
-							<h2 id="project-full-title">Titre du projet</h2>
-							<p id="project-description">
-								Chargement en cours...
-							</p>
-						</div>
 					</div>
-
 				</div>
+			</div>
+		</section>
 
+		<!-- Benefits Section -->
+		<section class="project-benefits py-5" id="benefits-section" style="display:none;">
+			<div class="container" data-aos="fade-up">
+				<div class="text-center mb-5">
+					<h2 class="section-heading d-inline-block border-bottom pb-2 project-accent-text">Bénéfices & Impact
+					</h2>
+				</div>
+				<div class="row gy-4 justify-content-center" id="project-benefits">
+					<!-- Injected via JS -->
+				</div>
 			</div>
 		</section>
 
