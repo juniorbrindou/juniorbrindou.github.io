@@ -13,11 +13,10 @@
 	<link href="assets/img/logo-jb-new.png" rel="icon" type="image/png">
 	<link href="assets/img/logo-jb-new.png" rel="apple-touch-icon">
 
-	<!-- Google Fonts -->
+	<!-- Fonts: Dark Terminal Design -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
 	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -33,31 +32,22 @@
 
 <body>
 
+	<!-- Custom cursor -->
+	<div id="cur-dot"></div>
+	<div id="cur-ring"></div>
+
 	<!-- ======= Page Loader ======= -->
 	<div id="page-loader" class="page-loader">
-		<div class="loader-terminal">
-			<div class="loader-terminal-header">
-				<span class="terminal-btn red"></span>
-				<span class="terminal-btn yellow"></span>
-				<span class="terminal-btn green"></span>
-				<span class="terminal-title">junior@portfolio ~ %</span>
-			</div>
-			<div class="loader-terminal-body">
-				<div class="loader-line">
-					<span class="loader-prompt">$</span>
-					<span class="loader-text">cat project_details.txt</span>
-				</div>
-				<div class="loader-progress">
-					<div class="loader-progress-bar"></div>
-				</div>
-			</div>
+		<div class="loader-inner">
+			<div class="loader-logo-text">JB<em>&lt;/&gt;</em></div>
+			<div class="loader-bar"></div>
 		</div>
 	</div>
 
 	<!-- ======= Navigation Container (Reusable Component) ======= -->
 	<div id="nav-wrapper"></div>
 
-	<main id="main" class="project-details-page">
+	<main id="main" class="project-details-page" style="padding-top: var(--nav-h);">
 
 		<!-- Hero Banner with Swiper -->
 		<section class="project-hero mt-0">
@@ -147,8 +137,14 @@
 	<!-- ======= Footer ======= -->
 	<footer id="footer">
 		<div class="container">
-			<div class="copyright" data-content="footer.copyright">
-				<!-- Dynamically populated -->
+			<div class="footer-inner">
+				<div class="f-logo">JB<em>&lt;/&gt;</em></div>
+				<div class="f-social">
+					<a href="https://github.com/juniorbrindou" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" rel="noopener">LinkedIn</a>
+					<a href="https://twitter.com/juniorbrindou" target="_blank" rel="noopener">Twitter</a>
+				</div>
+				<div class="f-copy" data-content="footer.copyright"></div>
 			</div>
 		</div>
 	</footer>
@@ -168,6 +164,41 @@
 
 	<!-- Main JS File -->
 	<script src="assets/js/main.js"></script>
+
+	<!-- Page-specific: cursor, nav scroll -->
+	<script>
+	(function () {
+		/* --- Custom cursor --- */
+		const dot  = document.getElementById('cur-dot');
+		const ring = document.getElementById('cur-ring');
+		if (!dot || !ring) return;
+		let mx = 0, my = 0, rx = 0, ry = 0;
+		document.addEventListener('mousemove', e => {
+			mx = e.clientX; my = e.clientY;
+			dot.style.left = mx + 'px';
+			dot.style.top  = my + 'px';
+		});
+		(function animRing() {
+			rx += (mx - rx) * 0.11;
+			ry += (my - ry) * 0.11;
+			ring.style.left = rx + 'px';
+			ring.style.top  = ry + 'px';
+			requestAnimationFrame(animRing);
+		})();
+		document.querySelectorAll('a, button').forEach(el => {
+			el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+			el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+		});
+
+		/* --- Nav scrolled class --- */
+		const navEl = document.getElementById('nav');
+		if (navEl) {
+			window.addEventListener('scroll', () => {
+				navEl.classList.toggle('scrolled', window.scrollY > 40);
+			}, { passive: true });
+		}
+	})();
+	</script>
 
 </body>
 
