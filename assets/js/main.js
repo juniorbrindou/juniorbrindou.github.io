@@ -344,9 +344,10 @@
 
     if (itemsContainer && portfolio.items) {
       itemsContainer.innerHTML = portfolio.items.map((item, idx) => {
+        const itemId = item.id !== undefined ? item.id : idx;
         const gallery = item.gallery || [item.img];
         const extraImages = gallery.slice(1).map(img => 
-          `<a href="${img}" data-gallery="gallery-${idx}" class="portfolio-lightbox" title="${item.title}"></a>`
+          `<a href="${img}" data-gallery="gallery-${itemId}" class="portfolio-lightbox" title="${item.title}"></a>`
         ).join('');
 
         return `
@@ -355,9 +356,9 @@
             <div class="portfolio-img-container">
               <img src="${item.img}" class="img-fluid" alt="${item.title}">
               <div class="portfolio-links">
-                <a href="${item.img}" data-gallery="gallery-${idx}" class="portfolio-lightbox" title="${item.title}"><i class="bx bx-plus"></i></a>
+                <a href="${item.img}" data-gallery="gallery-${itemId}" class="portfolio-lightbox" title="${item.title}"><i class="bx bx-plus"></i></a>
                 <div style="display:none">${extraImages}</div>
-                <a href="portfolio-details.html?id=${idx}" title="Plus de détails"><i class="bx bx-link"></i></a>
+                <a href="portfolio-details.html?id=${itemId}" title="Plus de détails"><i class="bx bx-link"></i></a>
               </div>
             </div>
             <div class="portfolio-info-bottom"><h4>${item.title}</h4><p>${item.description || ''}</p></div>
@@ -405,8 +406,26 @@
 
   async function loadProjectDetails(data) {
     const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get('id'));
-    const project = (data.portfolio && data.portfolio.items) ? data.portfolio.items[id] : null;
+    const id = params.get('id');
+    
+    let project;
+    if (id && isNaN(id)) {
+        // Fetch project info dynamically from its folder
+        try {
+            const response = await fetch(`assets/projects/${id}/project-info.json`);
+            if (response.ok) {
+                project = await response.json();
+                // Adjust paths
+                project.img = `assets/projects/${id}/${project.thumbnail}`;
+                project.gallery = (project.gallery || []).map(img => `assets/projects/${id}/${img}`);
+            }
+        } catch (e) {
+            console.error("Error loading project info:", e);
+        }
+    } else if (id !== null) {
+        const idx = parseInt(id);
+        project = (data.portfolio && data.portfolio.items) ? data.portfolio.items[idx] : null;
+    }
 
     if (!project) {
         const descEl = document.getElementById('project-description');
@@ -467,8 +486,38 @@
         }
       });
 
+      // --- Dynamic Projects Loading ---
+      let projects = [];
+      try {
+        const projResp = await fetch('assets/projects/projects.json');
+        if (projResp.ok) {
+          const projectIds = await projResp.json();
+          const projectPromises = projectIds.map(async (id) => {
+            try {
+              const resp = await fetch(`assets/projects/${id}/project-info.json`);
+              if (resp.ok) {
+                const proj = await resp.json();
+                proj.id = id;
+                proj.img = `assets/projects/${id}/${proj.thumbnail}`;
+                proj.gallery = (proj.gallery || []).map(img => `assets/projects/${id}/${img}`);
+                return proj;
+              }
+            } catch (e) { console.error(`Error loading project ${id}:`, e); }
+            return null;
+          });
+          projects = (await Promise.all(projectPromises)).filter(p => p !== null);
+        }
+      } catch (e) { console.warn('Dynamic projects not available'); }
+
+      // Merge dynamic projects with static ones from content.json
+      if (projects.length > 0) {
+        const dynamicTitles = projects.map(p => p.title.toLowerCase());
+        const staticItems = (data.portfolio.items || []).filter(item => !dynamicTitles.includes(item.title.toLowerCase()));
+        data.portfolio.items = [...projects, ...staticItems];
+      }
+
       if (window.location.pathname.includes('portfolio-details.html')) {
-        loadProjectDetails(data);
+        await loadProjectDetails(data);
       } else {
         renderSkills(data.skills.categories);
         renderResume(data.resume.education, 'education');

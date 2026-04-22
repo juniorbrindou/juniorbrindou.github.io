@@ -1,0 +1,19 @@
+{
+  "title": "Gestock (Souralè Groupe)",
+  "category": "filter-app",
+  "description": "Plateforme web de gestion de stock et logistique pour le secteur événementiel.",
+  "client": "Souralè Groupe",
+  "date": "2023",
+  "url": "#",
+  "thumbnail": "thumbnail.png",
+  "gallery": [
+    "screens/screenshot_0.png",
+    "screens/screenshot_1.png",
+    "screens/screenshot_2.png",
+    "screens/screenshot_3.png",
+    "screens/screenshot_4.png",
+    "screens/screenshot_5.png",
+    "screens/screenshot_6.png",
+    "screens/screenshot_7.png"
+  ]
+}
