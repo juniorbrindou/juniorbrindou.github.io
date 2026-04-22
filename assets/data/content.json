@@ -354,11 +354,25 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "Si vous avez besoin d'un développeur compétent et passionné, n'hésitez pas à me contacter.",
+    "description": "Expert en solutions web et mobiles, je conçois des applications performantes, accessibles et sur mesure (E-commerce, API). Contactez-moi pour donner vie à vos projets.",
     "info": {
       "address": "Abidjan, Côte d'Ivoire",
       "email": "juniorbrindou225@outlook.fr",
       "phone": "+225 07 79 84 37 57"
+    },
+    "templates": {
+      "contact": {
+        "subject": "Prise de contact - [Votre Nom]",
+        "message": "Bonjour Junior,\n\nJe souhaiterais entrer en contact avec vous pour discuter de..."
+      },
+      "prestation": {
+        "subject": "Demande de prestation - [Nom du Projet]",
+        "message": "Bonjour Junior,\n\nJ'ai un projet de [Type de projet] et je souhaiterais bénéficier de votre expertise pour..."
+      },
+      "devis": {
+        "subject": "Demande de devis - [Nom du Projet]",
+        "message": "Bonjour Junior,\n\nPourriez-vous me transmettre un devis pour la réalisation de [Détails du projet] ?\n\nVoici les spécifications principales :\n-"
+      }
     }
   },
   "footer": {

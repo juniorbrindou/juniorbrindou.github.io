@@ -2004,7 +2004,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  padding: 80px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -2056,7 +2056,7 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  padding: 35px;
+  padding: 25px;
   background: var(--card-bg);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
@@ -2064,7 +2064,7 @@ section {
 }
 
 .contact .php-email-form .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .contact .php-email-form label {
@@ -2079,7 +2079,7 @@ section {
 .contact .php-email-form textarea,
 .contact .php-email-form select {
   width: 100%;
-  padding: 14px 18px;
+  padding: 10px 15px;
   border: 1px solid var(--border-color);
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
@@ -2098,7 +2098,7 @@ section {
 }
 
 .contact .php-email-form textarea {
-  min-height: 180px;
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -2374,7 +2374,6 @@ section {
 #contact .php-email-form {
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px;
 }
 
 @media (max-width: 768px) {

@@ -382,6 +382,27 @@
     }
   }
 
+  function initContactTemplates(data) {
+    const messageType = select('#messageType');
+    const subjectInput = select('#subject');
+    const messageInput = select('#message');
+
+    if (!messageType || !subjectInput || !messageInput || !data.contact.templates) return;
+
+    messageType.addEventListener('change', function() {
+      const selectedType = this.value;
+      const template = data.contact.templates[selectedType];
+
+      if (template) {
+        subjectInput.value = template.subject || '';
+        messageInput.value = template.message || '';
+      } else {
+        subjectInput.value = '';
+        messageInput.value = '';
+      }
+    });
+  }
+
   async function loadProjectDetails(data) {
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
@@ -466,6 +487,7 @@
         }
         if (data.hero && data.hero.typedItems) initTyped(data.hero.typedItems);
         initPortfolioIsotope();
+        initContactTemplates(data);
       }
 
       AOS.init({ duration: 1000, easing: 'ease-in-out', once: true, mirror: false });
