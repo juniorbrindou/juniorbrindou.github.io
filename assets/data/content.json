@@ -42,7 +42,7 @@
     "subtitle": "Développeur .NET / Angular & Freelance",
     "info": {
       "expertise": "Web & Mobile",
-      "website": "juniorbrindou.github.io",
+      "website": "brindoujunior.com",
       "phone": "+225 07 79 84 37 57",
       "city": "Abidjan, Côte d'Ivoire",
       "experience": "{exp}+ années",
@@ -52,7 +52,7 @@
     },
     "description": [
       "Développeur Full Stack spécialisé en ASP.NET et Angular avec plus de {exp} ans d'expérience dans le développement d'applications web et mobiles.",
-      "Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique, en mettant l'accent sur l'automatisation CI/CD, la sécurité et les architectures cloud (AWS, Docker)."
+      "Actuellement freelance chez Innova7th, je développe des applications multi-tenant avec provisioning dynamique, en mettant l'accent sur l'automatisation CI/CD, la sécurité avec une bonne maîtrise du cloud AWS."
     ]
   },
   "skills": {
@@ -62,28 +62,64 @@
       {
         "name": "Backend",
         "items": [
-          { "name": "ASP.NET / C#", "level": "90%" },
-          { "name": "SQL Server / MySQL / PostgreSQL", "level": "85%" },
-          { "name": "PHP / Laravel", "level": "75%" },
-          { "name": "REST APIs", "level": "90%" }
+          {
+            "name": "ASP.NET / C#",
+            "level": "90%"
+          },
+          {
+            "name": "SQL Server / MySQL / PostgreSQL",
+            "level": "85%"
+          },
+          {
+            "name": "PHP / Laravel",
+            "level": "75%"
+          },
+          {
+            "name": "REST APIs",
+            "level": "90%"
+          }
         ]
       },
       {
         "name": "Frontend & Mobile",
         "items": [
-          { "name": "Angular 14+", "level": "90%" },
-          { "name": "React Js", "level": "70%" },
-          { "name": "Flutter", "level": "75%" },
-          { "name": "TypeScript", "level": "85%" }
+          {
+            "name": "Angular 14+",
+            "level": "90%"
+          },
+          {
+            "name": "React Js",
+            "level": "70%"
+          },
+          {
+            "name": "Flutter",
+            "level": "75%"
+          },
+          {
+            "name": "TypeScript",
+            "level": "85%"
+          }
         ]
       },
       {
         "name": "DevOps & Outils",
         "items": [
-          { "name": "Git / GitHub", "level": "88%" },
-          { "name": "Docker / AWS", "level": "80%" },
-          { "name": "Linux (Ubuntu) / IIS", "level": "80%" },
-          { "name": "CI/CD / Agile", "level": "85%" }
+          {
+            "name": "Git / GitHub",
+            "level": "88%"
+          },
+          {
+            "name": "Docker / AWS",
+            "level": "80%"
+          },
+          {
+            "name": "Linux (Ubuntu) / IIS",
+            "level": "80%"
+          },
+          {
+            "name": "CI/CD / Agile",
+            "level": "85%"
+          }
         ]
       }
     ]
@@ -92,10 +128,26 @@
     "title": "Statistiques",
     "description": "Quelques chiffres qui illustrent mon parcours et mon engagement dans le développement logiciel.",
     "items": [
-      { "label": "Années d'expérience", "target": "{exp}", "desc": "En développement Full Stack" },
-      { "label": "Projets réalisés", "target": 50, "desc": "Applications web et mobiles" },
-      { "label": "Clients satisfaits", "target": 25, "desc": "Entreprises et startups" },
-      { "label": "Heures de code", "target": 1000, "desc": "Cette année" }
+      {
+        "label": "Années d'expérience",
+        "target": "{exp}",
+        "desc": "En développement Full Stack"
+      },
+      {
+        "label": "Projets réalisés",
+        "target": 50,
+        "desc": "Applications web et mobiles"
+      },
+      {
+        "label": "Clients satisfaits",
+        "target": 25,
+        "desc": "Entreprises et startups"
+      },
+      {
+        "label": "Heures de code",
+        "target": 1000,
+        "desc": "Cette année"
+      }
     ]
   },
   "resume": {
@@ -159,15 +211,27 @@
     "title": "Portfolio",
     "description": "Découvrez une sélection de mes projets récents, illustrant mon expertise technique et ma capacité à résoudre des problématiques complexes.",
     "filters": [
-      { "id": "*", "label": "Tout" },
-      { "id": ".filter-app", "label": "App" },
-      { "id": ".filter-card", "label": "Design" },
-      { "id": ".filter-web", "label": "Web" }
+      {
+        "id": "*",
+        "label": "Tout"
+      },
+      {
+        "id": ".filter-app",
+        "label": "App"
+      },
+      {
+        "id": ".filter-card",
+        "label": "Design"
+      },
+      {
+        "id": ".filter-web",
+        "label": "Web"
+      }
     ],
     "items": [
-      { 
-        "title": "Souralè Groupe", 
-        "category": "filter-app", 
+      {
+        "title": "Souralè Groupe",
+        "category": "filter-app",
         "img": "assets/img/portfolio/portfolio-1.png",
         "description": "Plateforme web de gestion de stock et logistique pour le secteur événementiel.",
         "gallery": [
@@ -175,9 +239,9 @@
           "assets/img/portfolio/portfolio-3.png"
         ]
       },
-      { 
-        "title": "Application MSA", 
-        "category": "filter-web", 
+      {
+        "title": "Application MSA",
+        "category": "filter-web",
         "img": "assets/img/portfolio/portfolio-2.jpg",
         "description": "Système de gestion académique pour le suivi des étudiants et des inscriptions.",
         "client": "Maison des Sophos",
@@ -188,9 +252,9 @@
           "assets/img/portfolio/portfolio-5.jpg"
         ]
       },
-      { 
-        "title": "Innova7th Dashboard", 
-        "category": "filter-app", 
+      {
+        "title": "Innova7th Dashboard",
+        "category": "filter-app",
         "img": "assets/img/portfolio/portfolio-3.png",
         "description": "Tableau de bord multi-tenant avec provisioning automatique AWS.",
         "gallery": [
@@ -198,26 +262,33 @@
           "assets/img/portfolio/portfolio-6.png"
         ]
       },
-      { 
-        "title": "Design System UI", 
-        "category": "filter-card", 
+      {
+        "title": "Design System UI",
+        "category": "filter-card",
         "img": "assets/img/portfolio/portfolio-4.png",
         "description": "Bibliothèque de composants UI modernes pour applications SaaS.",
-        "gallery": ["assets/img/portfolio/portfolio-4.png"]
+        "gallery": [
+          "assets/img/portfolio/portfolio-4.png"
+        ]
       },
-      { 
-        "title": "E-commerce Hub", 
-        "category": "filter-web", 
+      {
+        "title": "E-commerce Hub",
+        "category": "filter-web",
         "img": "assets/img/portfolio/portfolio-5.jpg",
         "description": "Solution de vente en ligne intégrée avec gestion dynamique des stocks.",
-        "gallery": ["assets/img/portfolio/portfolio-5.jpg", "assets/img/portfolio/portfolio-9.jpg"]
+        "gallery": [
+          "assets/img/portfolio/portfolio-5.jpg",
+          "assets/img/portfolio/portfolio-9.jpg"
+        ]
       },
-      { 
-        "title": "Task Manager Mobile", 
-        "category": "filter-app", 
+      {
+        "title": "Task Manager Mobile",
+        "category": "filter-app",
         "img": "assets/img/portfolio/portfolio-6.png",
         "description": "Application mobile Flutter pour la gestion collaborative de tâches.",
-        "gallery": ["assets/img/portfolio/portfolio-6.png"]
+        "gallery": [
+          "assets/img/portfolio/portfolio-6.png"
+        ]
       }
     ]
   },
@@ -227,31 +298,60 @@
     "items": [
       {
         "title": "Développement Web Responsive",
-        "features": ["Sites web modernes", "Mobile-first", "Performance optimisée","Visibilité sur les moteurs de recherche"]
+        "features": [
+          "Sites web modernes",
+          "Mobile-first",
+          "Performance optimisée",
+          "Visibilité sur les moteurs de recherche"
+        ]
       },
       {
         "title": "Applications Mobiles",
-        "features": ["iOS et Android", "Cross-platform", "PWA", "API natives"]
+        "features": [
+          "iOS et Android",
+          "Cross-platform",
+          "PWA",
+          "API natives"
+        ]
       },
       {
         "title": "Architecture & API",
-        "features": ["API RESTful", "Microservices", "Intégration", "Documentation"]
+        "features": [
+          "API RESTful",
+          "Microservices",
+          "Intégration",
+          "Documentation"
+        ]
       },
       {
         "title": "E-commerce",
-        "features": ["Solutions sur mesure", "Paiement en ligne", "Gestion de stock", "Optimisation"]
+        "features": [
+          "Solutions sur mesure",
+          "Paiement en ligne",
+          "Gestion de stock",
+          "Optimisation"
+        ]
       },
       {
         "title": "Maintenance & Support",
-        "features": ["Suivi technique", "Monitoring", "Mises à jour", "Sécurité"]
+        "features": [
+          "Suivi technique",
+          "Monitoring",
+          "Mises à jour",
+          "Sécurité"
+        ]
       },
       {
         "title": "Optimisation & SEO",
-        "features": ["Performance", "Référencement", "Analytics", "Conseils"]
+        "features": [
+          "Performance",
+          "Référencement",
+          "Analytics",
+          "Conseils"
+        ]
       }
     ]
   },
-
   "contact": {
     "title": "Contact",
     "description": "Si vous avez besoin d'un développeur compétent et passionné, n'hésitez pas à me contacter.",

@@ -2287,15 +2287,17 @@ section {
 
 .top-contact .contact-info {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
 .top-contact .info-item {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   margin-right: 25px;
   padding: 10px 0;
+  white-space: nowrap;
 }
 
 .top-contact .info-item:last-child {
@@ -2320,6 +2322,12 @@ section {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+@media (max-width: 1366px) {
+  .top-contact .top-social {
+    display: none !important;
+  }
 }
 
 .top-contact .top-social a {

@@ -164,7 +164,7 @@
     navWrapper.innerHTML = `
       <!-- ======= Top Contact Bar ======= -->
       <div id="top-contact" class="top-contact d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="container d-flex justify-content-center justify-content-md-between flex-nowrap">
           <div class="contact-info d-flex align-items-center">
             <div class="info-item">
               <i class="bi bi-envelope"></i>
