@@ -5,13 +5,26 @@
   "fullDescription": "La Maison des Sophos est une application web complète développée pour gérer de manière centralisée les activités d'un espace multifonctionnel et indépendant. La plateforme offre un système avancé pour la gestion d'une bibliothèque physique (suivi des emprunts et vérification des disponibilités), l'administration d'une librairie (vente d'ouvrages et gestion des stocks e-commerce) ainsi que le pilotage d'un espace de coworking (gestion des réservations et des services associés). Elle est dotée d'un back-office administratif robuste garantissant une gestion fluide de toutes les opérations.",
   "client": "La Maison des Sophos",
   "date": "Mars 2026",
-  "url": "https://lamaisondessophos.com",
+  "url": "https://lamaisondessophos.ci",
   "urlLabel": "Voir le site en ligne",
   "themeColor": "#8b5cf6",
   "thumbnail": "thumbnail.png",
   "gallery": [
     "screens/screenshot_0.png",
-    "screens/screenshot_1.png"
+    "screens/screenshot_1.png",
+    "screens/screenshot_2.png",
+    "screens/screenshot_3.png",
+    "screens/screenshot_4.png",
+    "screens/screenshot_5.png",
+    "screens/screenshot_6.png",
+    "screens/screenshot_7.png",
+    "screens/screenshot_8.png",
+    "screens/screenshot_9.png",
+    "screens/screenshot_10.png",
+    "screens/screenshot_11.png",
+    "screens/screenshot_12.png",
+    "screens/screenshot_13.png",
+    "screens/screenshot_14.png"
   ],
   "techStack": [
     { "name": "React 18", "icon": "bx bxl-react" },
