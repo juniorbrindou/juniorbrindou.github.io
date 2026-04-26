@@ -1,7 +1,0 @@
-.git
-Dockerfile
-docker-compose.yml
-.dockerignore
-CNAME
-README.md
-_config.yml
