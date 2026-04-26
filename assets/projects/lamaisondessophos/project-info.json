@@ -1,0 +1,40 @@
+{
+  "title": "La Maison des Sophos",
+  "category": "filter-web",
+  "description": "Plateforme web de gestion intégrée pour une bibliothèque physique, une librairie et un espace de coworking.",
+  "fullDescription": "La Maison des Sophos est une application web complète développée pour gérer de manière centralisée les activités d'un espace multifonctionnel et indépendant. La plateforme offre un système avancé pour la gestion d'une bibliothèque physique (suivi des emprunts et vérification des disponibilités), l'administration d'une librairie (vente d'ouvrages et gestion des stocks e-commerce) ainsi que le pilotage d'un espace de coworking (gestion des réservations et des services associés). Elle est dotée d'un back-office administratif robuste garantissant une gestion fluide de toutes les opérations.",
+  "client": "La Maison des Sophos",
+  "date": "Mars 2026",
+  "url": "https://lamaisondessophos.com",
+  "urlLabel": "Voir le site en ligne",
+  "themeColor": "#8b5cf6",
+  "thumbnail": "thumbnail.png",
+  "gallery": [
+    "screens/screenshot_0.png",
+    "screens/screenshot_1.png"
+  ],
+  "techStack": [
+    { "name": "React 18", "icon": "bx bxl-react" },
+    { "name": "TypeScript", "icon": "bx bxl-javascript" },
+    { "name": "Node.js", "icon": "bx bxl-nodejs" },
+    { "name": "Tailwind CSS", "icon": "bx bxl-css3" },
+    { "name": "PostgreSQL", "icon": "bx bx-data" }
+  ],
+  "benefits": [
+    {
+      "title": "Gestion de Bibliothèque",
+      "description": "Suivi des emprunts, suivi des retours et consultation en temps réel de la disponibilité des ouvrages.",
+      "icon": "bx bx-book-reader"
+    },
+    {
+      "title": "Librairie Intégrée",
+      "description": "Vente de livres avec gestion dynamique des stocks, des prix et suivi complet du processus de commande.",
+      "icon": "bx bx-store-alt"
+    },
+    {
+      "title": "Gestion du Coworking",
+      "description": "Système d'administration pour la gestion de l'espace de coworking, l'accès et les réservations.",
+      "icon": "bx bx-buildings"
+    }
+  ]
+}

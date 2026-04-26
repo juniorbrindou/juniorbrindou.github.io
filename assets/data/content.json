@@ -240,14 +240,6 @@
         ]
       },
       {
-        "title": "Projet Éclat",
-        "category": "filter-web",
-        "img": "assets/projects/eclat/thumbnail.png",
-        "description": "Site web moderne pour une entreprise de construction et d'aménagement.",
-        "url": "https://eclat.brindoujunior.com",
-        "gallery": []
-      },
-      {
         "title": "Application MSA",
         "category": "filter-web",
         "img": "assets/img/portfolio/portfolio-2.jpg",
@@ -258,16 +250,6 @@
         "gallery": [
           "assets/img/portfolio/portfolio-2.jpg",
           "assets/img/portfolio/portfolio-5.jpg"
-        ]
-      },
-      {
-        "title": "Innova7th Dashboard",
-        "category": "filter-app",
-        "img": "assets/img/portfolio/portfolio-3.png",
-        "description": "Tableau de bord multi-tenant avec provisioning automatique AWS.",
-        "gallery": [
-          "assets/img/portfolio/portfolio-3.png",
-          "assets/img/portfolio/portfolio-6.png"
         ]
       },
       {
