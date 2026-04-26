@@ -1,0 +1,35 @@
+{
+  "title": "Eclat",
+  "category": "filter-web",
+  "description": "Site web moderne pour une entreprise spécialisée dans la construction, la rénovation et l'aménagement foncier.",
+  "fullDescription": "Éclat est une plateforme digitale conçue pour présenter les services et réalisations d'une société opérant dans le bâtiment. Le site couvre différents pôles tels que la construction, l'aménagement foncier, la décoration d'intérieur, et la rénovation, offrant une navigation intuitive et une esthétique soignée pour attirer des clients potentiels.",
+  "client": "Eclat",
+  "date": "Avril 2026",
+  "url": "https://eclat.brindoujunior.com",
+  "urlLabel": "Voir le site en ligne",
+  "themeColor": "#2980b9",
+  "thumbnail": "thumbnail.png",
+  "gallery": [
+    "screens/screenshot_0.png",
+    "screens/screenshot_1.png",
+    "screens/screenshot_2.png",
+    "screens/screenshot_3.png"
+  ],
+  "techStack": [
+    { "name": "HTML5", "icon": "bx bxl-html5" },
+    { "name": "CSS3", "icon": "bx bxl-css3" },
+    { "name": "JavaScript", "icon": "bx bxl-javascript" }
+  ],
+  "benefits": [
+    {
+      "title": "Vitrines Multi-services",
+      "description": "Présentation détaillée de chaque prestation : aménagement, bureau, équipement, etc.",
+      "icon": "bx bx-building-house"
+    },
+    {
+      "title": "Prise de Contact Facilitée",
+      "description": "Intégration d'un formulaire pour les demandes de devis et renseignements.",
+      "icon": "bx bx-envelope"
+    }
+  ]
+}

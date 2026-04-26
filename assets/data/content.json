@@ -240,6 +240,14 @@
         ]
       },
       {
+        "title": "Projet Éclat",
+        "category": "filter-web",
+        "img": "assets/projects/eclat/thumbnail.png",
+        "description": "Site web moderne pour une entreprise de construction et d'aménagement.",
+        "url": "https://eclat.brindoujunior.com",
+        "gallery": []
+      },
+      {
         "title": "Application MSA",
         "category": "filter-web",
         "img": "assets/img/portfolio/portfolio-2.jpg",
