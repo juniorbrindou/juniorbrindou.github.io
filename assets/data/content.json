@@ -238,34 +238,6 @@
           "assets/img/portfolio/portfolio-1.png",
           "assets/img/portfolio/portfolio-3.png"
         ]
-      },
-      {
-        "title": "Design System UI",
-        "category": "filter-card",
-        "img": "assets/img/portfolio/portfolio-4.png",
-        "description": "Bibliothèque de composants UI modernes pour applications SaaS.",
-        "gallery": [
-          "assets/img/portfolio/portfolio-4.png"
-        ]
-      },
-      {
-        "title": "E-commerce Hub",
-        "category": "filter-web",
-        "img": "assets/img/portfolio/portfolio-5.jpg",
-        "description": "Solution de vente en ligne intégrée avec gestion dynamique des stocks.",
-        "gallery": [
-          "assets/img/portfolio/portfolio-5.jpg",
-          "assets/img/portfolio/portfolio-9.jpg"
-        ]
-      },
-      {
-        "title": "Task Manager Mobile",
-        "category": "filter-app",
-        "img": "assets/img/portfolio/portfolio-6.png",
-        "description": "Application mobile Flutter pour la gestion collaborative de tâches.",
-        "gallery": [
-          "assets/img/portfolio/portfolio-6.png"
-        ]
       }
     ]
   },
