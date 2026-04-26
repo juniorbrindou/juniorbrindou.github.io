@@ -4,7 +4,7 @@
   "description": "Plateforme web de gestion de stock et logistique pour le secteur événementiel.",
   "fullDescription": "Initialement connue sous le nom de Souralè, Gestock est une plateforme SaaS sur mesure développée pour relever les défis complexes de la logistique événementielle. Cette solution complète centralise la gestion des stocks, facilite le suivi précis des mouvements de matériel et assure un contrôle rigoureux des pertes (articles endommagés, égarés, etc.). De plus, Gestock intègre la génération automatique des factures et automatise le processus de réapprovisionnement. Ce projet a propulsé Souralè Groupe d'une organisation artisanale vers une logistique de pointe, optimisée et hautement fiable.",
   "client": "Souralè Groupe",
-  "date": "Décembre 2023",
+  "date": "Décembre 2021",
   "url": "https://gestock.brindoujunior.com/login",
   "urlLabel": "Lien de test",
   "themeColor": "#d35400",
