@@ -240,19 +240,6 @@
         ]
       },
       {
-        "title": "Application MSA",
-        "category": "filter-web",
-        "img": "assets/img/portfolio/portfolio-2.jpg",
-        "description": "Système de gestion académique pour le suivi des étudiants et des inscriptions.",
-        "client": "Maison des Sophos",
-        "date": "Décembre 2023",
-        "url": "https://sophos-app.com",
-        "gallery": [
-          "assets/img/portfolio/portfolio-2.jpg",
-          "assets/img/portfolio/portfolio-5.jpg"
-        ]
-      },
-      {
         "title": "Design System UI",
         "category": "filter-card",
         "img": "assets/img/portfolio/portfolio-4.png",
