@@ -755,23 +755,31 @@ section { padding: 110px 0; overflow: hidden; }
   display: block;
   margin-bottom: 8px;
 }
-.tc-level {
+.tc-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 9px;
+  border-radius: 20px;
   font-family: var(--ff-mono);
-  font-size: 11px;
-  color: var(--cyan);
-  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.tc-bar {
-  margin-top: 8px;
-  height: 2px;
-  background: var(--surface-3);
-  overflow: hidden;
+.tc-badge--intermediaire {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  border: 1px solid #22c55e;
 }
-.tc-bar-fill {
-  height: 100%;
-  background: var(--cyan);
-  width: 0;
-  transition: width 1.3s cubic-bezier(.4,0,.2,1);
+.tc-badge--debutant {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+.tc-badge--avance {
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+  border: 1px solid #f97316;
 }
 
 /* =============================================

@@ -201,10 +201,15 @@
   function renderSkills(categories) {
     const container = document.querySelector('[data-list="skills.categories"]');
     if (!container || !categories) return;
+    const levelClass = {
+      'Avancé': 'avance',
+      'Intermédiaire': 'intermediaire',
+      'Débutant': 'debutant'
+    };
     const allItems = categories.flatMap(cat => cat.items);
     container.innerHTML = allItems.map(skill => {
-      const level = parseInt(skill.level) || 80;
-      return `<div class="tech-card" data-level="${level}"><span class="tc-name">${skill.name}</span><span class="tc-level">${skill.level}</span><div class="tc-bar"><div class="tc-bar-fill"></div></div></div>`;
+      const cls = levelClass[skill.level] || 'debutant';
+      return `<div class="tech-card"><span class="tc-name">${skill.name}</span><span class="tc-badge tc-badge--${cls}">${skill.level}</span></div>`;
     }).join('');
   }
 

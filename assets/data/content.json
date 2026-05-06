@@ -64,19 +64,19 @@
         "items": [
           {
             "name": "ASP.NET / C#",
-            "level": "90%"
+            "level": "Intermédiaire"
           },
           {
             "name": "SQL Server / MySQL / PostgreSQL",
-            "level": "85%"
+            "level": "Avancé"
           },
           {
             "name": "PHP / Laravel",
-            "level": "95%"
+            "level": "Avancé"
           },
           {
             "name": "REST APIs",
-            "level": "90%"
+            "level": "Avancé"
           }
         ]
       },
@@ -85,19 +85,19 @@
         "items": [
           {
             "name": "Angular",
-            "level": "90%"
+            "level": "Avancé"
           },
           {
             "name": "React Js",
-            "level": "70%"
+            "level": "Intermédiaire"
           },
           {
             "name": "Flutter",
-            "level": "75%"
+            "level": "Intermédiaire"
           },
           {
             "name": "TypeScript",
-            "level": "85%"
+            "level": "Avancé"
           }
         ]
       },
@@ -106,19 +106,19 @@
         "items": [
           {
             "name": "Git / GitHub",
-            "level": "88%"
+            "level": "Avancé"
           },
           {
             "name": "Docker / AWS",
-            "level": "80%"
+            "level": "Intermédiaire"
           },
           {
             "name": "Linux (Ubuntu) / IIS",
-            "level": "80%"
+            "level": "Intermédiaire"
           },
           {
             "name": "CI/CD / Agile",
-            "level": "85%"
+            "level": "Intermédiaire"
           }
         ]
       }
