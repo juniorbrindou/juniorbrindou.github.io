@@ -164,14 +164,14 @@
 
     navWrapper.innerHTML = `
       <nav id="nav">
-        <a href="${pathPrefix}#hero" class="nav-logo scrollto">JB<em>&lt;/&gt;</em></a>
+        <a href="${pathPrefix}#top" class="nav-logo scrollto">JB<em>&lt;/&gt;</em></a>
         <ul id="navbar" class="nav-links">
-          <li><a href="${pathPrefix}#hero" class="scrollto ${isDetails ? '' : 'active'}">${nav.home}</a></li>
-          <li><a href="${pathPrefix}#about" class="scrollto">${nav.about}</a></li>
-          <li><a href="${pathPrefix}#skills" class="scrollto">${nav.skills}</a></li>
-          <li><a href="${pathPrefix}#resume" class="scrollto">${nav.resume}</a></li>
-          <li><a href="${pathPrefix}#portfolio" class="scrollto ${isDetails ? 'active' : ''}">${nav.portfolio}</a></li>
-          <li><a href="${pathPrefix}#services" class="scrollto">${nav.services}</a></li>
+          <li><a href="${pathPrefix}#top" class="scrollto ${isDetails ? '' : 'active'}">${nav.home}</a></li>
+          <li><a href="${pathPrefix}#apropos" class="scrollto">${nav.about}</a></li>
+          <li><a href="${pathPrefix}#competences" class="scrollto">${nav.skills}</a></li>
+          <li><a href="${pathPrefix}#parcours" class="scrollto">${nav.resume}</a></li>
+          <li><a href="${pathPrefix}#projets" class="scrollto ${isDetails ? 'active' : ''}">${nav.portfolio}</a></li>
+          <li><a href="${pathPrefix}#prestations" class="scrollto">${nav.services}</a></li>
           <li><a href="${pathPrefix}#contact" class="scrollto">${nav.contact}</a></li>
         </ul>
         <div class="nav-right">
@@ -181,12 +181,12 @@
       </nav>
       <div id="mobile-nav" class="mobile-nav">
         <ul>
-          <li><a href="${pathPrefix}#hero" class="scrollto">${nav.home}</a></li>
-          <li><a href="${pathPrefix}#about" class="scrollto">${nav.about}</a></li>
-          <li><a href="${pathPrefix}#skills" class="scrollto">${nav.skills}</a></li>
-          <li><a href="${pathPrefix}#resume" class="scrollto">${nav.resume}</a></li>
-          <li><a href="${pathPrefix}#portfolio" class="scrollto">${nav.portfolio}</a></li>
-          <li><a href="${pathPrefix}#services" class="scrollto">${nav.services}</a></li>
+          <li><a href="${pathPrefix}#top" class="scrollto">${nav.home}</a></li>
+          <li><a href="${pathPrefix}#apropos" class="scrollto">${nav.about}</a></li>
+          <li><a href="${pathPrefix}#competences" class="scrollto">${nav.skills}</a></li>
+          <li><a href="${pathPrefix}#parcours" class="scrollto">${nav.resume}</a></li>
+          <li><a href="${pathPrefix}#projets" class="scrollto">${nav.portfolio}</a></li>
+          <li><a href="${pathPrefix}#prestations" class="scrollto">${nav.services}</a></li>
           <li><a href="${pathPrefix}#contact" class="scrollto">${nav.contact}</a></li>
         </ul>
       </div>
