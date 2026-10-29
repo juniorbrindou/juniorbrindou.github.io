@@ -1,205 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-	<title data-content="meta.title">Détails du Projet - Junior Brindou</title>
-	<meta content="" name="description">
-	<meta content="" name="keywords">
-
-	<!-- Favicons -->
-	<link href="assets/img/logo-jb-new.png" rel="icon" type="image/png">
-	<link href="assets/img/logo-jb-new.png" rel="apple-touch-icon">
-
-	<!-- Fonts: Dark Terminal Design -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
-	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-	<!-- Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projet - Junior Brindou</title>
+<meta name="description" content="Détail d'un projet réalisé par Junior Brindou, développeur full stack à Abidjan.">
+<link href="assets/img/logo-jb-new.png" rel="icon" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="assets/css/home.css" rel="stylesheet">
 </head>
-
 <body>
 
-	<!-- Custom cursor -->
-	<div id="cur-dot"></div>
-	<div id="cur-ring"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Junior Brindou</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html#projets">Projets</a>
+      <a class="opt" href="index.html#parcours">Parcours</a>
+      <a class="opt" href="index.html#competences">Compétences</a>
+      <a class="opt" href="index.html#prestations">Prestations</a>
+      <a class="contact-link" href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-	<!-- ======= Page Loader ======= -->
-	<div id="page-loader" class="page-loader">
-		<div class="loader-inner">
-			<div class="loader-logo-text">JB<em>&lt;/&gt;</em></div>
-			<div class="loader-bar"></div>
-		</div>
-	</div>
+<main>
+  <section class="detail-head">
+    <div class="wrap">
+      <a class="back" href="index.html#projets">Retour aux projets</a>
+      <h1 id="title">&nbsp;</h1>
+      <dl class="meta">
+        <div><dt>Client</dt><dd id="client">-</dd></div>
+        <div><dt>Date</dt><dd id="date">-</dd></div>
+        <div><dt>Site</dt><dd><a id="url" href="#" target="_blank" rel="noopener">-</a></dd></div>
+      </dl>
+    </div>
+  </section>
 
-	<!-- ======= Navigation Container (Reusable Component) ======= -->
-	<div id="nav-wrapper"></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="detail-body">
+        <div>
+          <h2>Aperçu</h2>
+          <p class="lead" id="description">Chargement en cours.</p>
+        </div>
+        <div id="stack-box" hidden>
+          <h3 class="sub">Technologies</h3>
+          <ul class="chips" id="stack"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<main id="main" class="project-details-page">
+  <section class="section" id="benefits-box" hidden>
+    <div class="wrap">
+      <h2>Ce que ça apporte</h2>
+      <ul class="services" id="benefits"></ul>
+    </div>
+  </section>
 
-		<!-- Hero Banner with Swiper -->
-		<section class="project-hero mt-0">
-			<div class="project-hero-slider swiper">
-				<div class="swiper-wrapper" id="project-gallery-container">
-					<!-- Dynamically populated -->
-					<div class="swiper-slide text-center d-flex align-items-center justify-content-center">
-						<div class="spinner-border text-light" role="status"></div>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
-			</div>
+  <section class="section" id="gallery-box" hidden>
+    <div class="wrap">
+      <h2>Captures</h2>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+</main>
 
-			<div class="project-hero-content text-center">
-				<div class="container">
-					<span class="category-badge" id="project-category">---</span>
-					<h1 id="project-full-title" style="font-family:var(--ff-heading);font-size:clamp(20px,3vw,32px);font-weight:700;margin:8px 0 0;color:#fff;">Titre du projet</h1>
-				</div>
-			</div>
-		</section>
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Junior Brindou</span>
+    <nav aria-label="Réseaux">
+      <a href="https://github.com/juniorbrindou" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
 
-		<!-- Info Section -->
-		<section class="project-info-bar py-4 shadow-sm">
-			<div class="container">
-				<div class="row text-center gy-3" data-aos="fade-up" data-aos-delay="100">
-					<div class="col-md-4">
-						<i class="bx bx-buildings fs-1 project-accent-color"></i>
-						<h5 class="mt-2 text-muted">Client</h5>
-						<p id="project-client" class="fw-bold mb-0">---</p>
-					</div>
-					<div class="col-md-4">
-						<i class="bx bx-calendar fs-1 project-accent-color"></i>
-						<h5 class="mt-2 text-muted">Date</h5>
-						<p id="project-date" class="fw-bold mb-0">---</p>
-					</div>
-					<div class="col-md-4">
-						<i class="bx bx-link-external fs-1 project-accent-color"></i>
-						<h5 class="mt-2 text-muted">Lien</h5>
-						<p class="mb-0"><a href="#" id="project-url" target="_blank"
-								class="fw-bold text-decoration-none project-accent-color">---</a></p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Description & Tech Stack -->
-		<section class="project-details-content py-5">
-			<div class="container">
-				<div class="row gy-5">
-					<div class="col-lg-8" data-aos="fade-right">
-						<h2 class="section-heading mb-4 border-bottom pb-2">Aperçu du projet</h2>
-						<p id="project-description" class="lead text-muted lh-lg">
-							Chargement en cours...
-						</p>
-					</div>
-					<div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
-						<div class="tech-stack-card p-4 rounded-4 shadow-sm border" id="tech-stack-container"
-							style="display:none;">
-							<h3 class="h4 mb-4 project-accent-text"><i class="bx bx-code-alt me-2"></i>Technologies
-								Utilisées</h3>
-							<ul class="list-unstyled mb-0" id="project-tech-stack">
-								<!-- Injected via JS -->
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Benefits Section -->
-		<section class="project-benefits py-5" id="benefits-section" style="display:none;">
-			<div class="container" data-aos="fade-up">
-				<div class="text-center mb-5">
-					<h2 class="section-heading d-inline-block border-bottom pb-2 project-accent-text">Bénéfices & Impact
-					</h2>
-				</div>
-				<div class="row gy-4 justify-content-center" id="project-benefits">
-					<!-- Injected via JS -->
-				</div>
-			</div>
-		</section>
-
-	</main>
-
-	<!-- ======= Footer ======= -->
-	<footer id="footer">
-		<div class="container">
-			<div class="footer-inner">
-				<div class="f-logo">JB<em>&lt;/&gt;</em></div>
-				<div class="f-social">
-					<a href="https://github.com/juniorbrindou" target="_blank" rel="noopener">GitHub</a>
-					<a href="https://www.linkedin.com/in/juniorbrindou/" target="_blank" rel="noopener">LinkedIn</a>
-					<a href="https://twitter.com/juniorbrindou" target="_blank" rel="noopener">Twitter</a>
-				</div>
-				<div class="f-copy" data-content="footer.copyright"></div>
-			</div>
-		</div>
-	</footer>
-
-	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-			class="bi bi-arrow-up-short"></i></a>
-
-	<!-- Vendor JS Files -->
-	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="assets/vendor/typed.js/typed.min.js"></script>
-	<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-	<!-- Main JS File -->
-	<script src="assets/js/main.js"></script>
-
-	<!-- Page-specific: cursor, nav scroll -->
-	<script>
-	(function () {
-		/* --- Custom cursor --- */
-		const dot  = document.getElementById('cur-dot');
-		const ring = document.getElementById('cur-ring');
-		if (!dot || !ring) return;
-		let mx = 0, my = 0, rx = 0, ry = 0;
-		document.addEventListener('mousemove', e => {
-			mx = e.clientX; my = e.clientY;
-			dot.style.left = mx + 'px';
-			dot.style.top  = my + 'px';
-		});
-		(function animRing() {
-			rx += (mx - rx) * 0.11;
-			ry += (my - ry) * 0.11;
-			ring.style.left = rx + 'px';
-			ring.style.top  = ry + 'px';
-			requestAnimationFrame(animRing);
-		})();
-		document.querySelectorAll('a, button').forEach(el => {
-			el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-			el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
-		});
-
-		/* --- Nav scrolled class --- */
-		const navEl = document.getElementById('nav');
-		if (navEl) {
-			window.addEventListener('scroll', () => {
-				navEl.classList.toggle('scrolled', window.scrollY > 40);
-			}, { passive: true });
-		}
-	})();
-	</script>
-
+<script src="assets/js/project.js"></script>
 </body>
-
 </html>

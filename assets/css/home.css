@@ -186,3 +186,31 @@ footer nav { display: flex; gap: 20px; }
   html { scroll-behavior: auto; }
   .shot img { transition: none; }
 }
+
+/* ---------- Page projet ---------- */
+.detail-head { padding: clamp(28px, 5vw, 64px) 0 clamp(32px, 5vw, 56px); }
+.back { display: inline-block; margin-bottom: 28px; color: var(--muted); text-underline-offset: 4px; }
+.back:hover { color: var(--ink); }
+.detail-head h1 {
+  font: 800 clamp(2.6rem, 9vw, 7rem)/.95 var(--ff-display); font-stretch: 78%; letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+.meta { margin: clamp(24px, 4vw, 48px) 0 0; padding-top: 20px; border-top: 1px solid var(--ink); display: grid; gap: 14px; }
+.meta dt { color: var(--muted); font-size: .9rem; }
+.meta dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.meta a { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.detail-body { display: grid; gap: 40px; }
+.detail-body .lead { font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.55; max-width: 60ch; }
+.detail-body .sub { margin: 0 0 16px; }
+.chips li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.gallery { display: grid; gap: 16px; }
+.gallery a { display: block; border: 1px solid var(--line); background: #fff; }
+.gallery img { width: 100%; height: auto; }
+[hidden] { display: none !important; }
+@media (min-width: 760px) {
+  .meta { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 980px) {
+  .detail-body { grid-template-columns: 2fr 1fr; gap: 72px; }
+}
