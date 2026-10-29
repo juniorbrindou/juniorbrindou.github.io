@@ -273,6 +273,15 @@
         ]
       },
       {
+        "title": "Paiement Mobile Money",
+        "features": [
+          "Orange Money, MTN MoMo, Moov Money",
+          "Collecte et décaissement",
+          "Callbacks de statut",
+          "Réconciliation par webhooks"
+        ]
+      },
+      {
         "title": "E-commerce",
         "features": [
           "Solutions sur mesure",
